@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=3 uid="uid://s6to2jaibxu5"]
+
+[ext_resource type="Texture2D" uid="uid://dgimmhl3ewjfa" path="res://images/success.png" id="1_pvgtf"]
+[ext_resource type="Script" path="res://scenes/grid_scene.gd" id="1_yvvl1"]
+[ext_resource type="Texture2D" uid="uid://51wu7nft337d" path="res://images/fall.png" id="2_j8cex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpg4i"]
+
+[node name="grid_scene" type="CenterContainer" groups=["correct_group", "grid_group"]]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yvvl1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+
+[node name="success" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 1
+texture = ExtResource("1_pvgtf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="fall" type="TextureRect" parent="ColorRect"]
+visible = false
+layout_mode = 1
+texture = ExtResource("2_j8cex")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="success" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_pvgtf")
+centered = false
+
+[node name="fall" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("2_j8cex")
+centered = false
+
+[node name="Button" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tpg4i")
+text = "0"
+flat = true
