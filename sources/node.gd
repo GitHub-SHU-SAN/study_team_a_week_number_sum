@@ -109,19 +109,19 @@ func set_puzzle(_seed:int):
 
 	signal_create_grid.emit(puzzle_data["size"], puzzle_data["row_targets"], puzzle_data["col_targets"], puzzle_data["row_target_indices"], puzzle_data["grid"])
 
-	if not puzzle_data.is_empty():
-		print("パズル生成成功:")
-		print("サイズ:", puzzle_data["size"])
-		print("グリッド:")
-		for row in puzzle_data["grid"]:
-			print(row)
-		print("行の目標値:", puzzle_data["row_targets"])
-		print("行の目標値に使用したインデックス:", puzzle_data["row_target_indices"])
-		print("列の目標値:", puzzle_data["col_targets"])
-		print("列の目標値に使用したインデックス:", puzzle_data["col_target_indices"])
-		print("シード値:", puzzle_data["seed"])
-	else:
-		print("パズル生成失敗")
+	#if not puzzle_data.is_empty():
+		#print("パズル生成成功:")
+		#print("サイズ:", puzzle_data["size"])
+		#print("グリッド:")
+		#for row in puzzle_data["grid"]:
+			#print(row)
+		#print("行の目標値:", puzzle_data["row_targets"])
+		#print("行の目標値に使用したインデックス:", puzzle_data["row_target_indices"])
+		#print("列の目標値:", puzzle_data["col_targets"])
+		#print("列の目標値に使用したインデックス:", puzzle_data["col_target_indices"])
+		#print("シード値:", puzzle_data["seed"])
+	#else:
+		#print("パズル生成失敗")
 
 
 func _ready() -> void:
@@ -153,3 +153,16 @@ func _on_text_edit_text_changed(new_text: String) -> void:
 
 func _on_menu_button_item_selected(index: int) -> void:
 	grid_size = index + 3
+
+
+func _on_button_2_pressed() -> void:
+	rng.seed = Time.get_ticks_msec()
+	var _seed_length = old_text.length()
+	if _seed_length > 0:
+		for grid in get_tree().get_nodes_in_group("grid_group"):
+			grid.get_parent().remove_child(grid)
+		rng.seed = Time.get_ticks_msec()
+		old_text = str(rng.randi_range(10000000, 99999999))
+		set_puzzle(int(old_text))
+		control.toggle_mode = false
+		control.update_toggle_visibility()

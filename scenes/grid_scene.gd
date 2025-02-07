@@ -3,6 +3,9 @@ extends CenterContainer
 signal signal_correct_check(node)
 
 @onready var control_node: Control = $"/root/Node/Control"
+@onready var camera_2d: Camera2D =  $"/root/Node/Camera2D"
+@onready var life_manager: Control = $"/root/Node/LifeManager"
+
 
 @onready var color_rect: ColorRect = $ColorRect
 @onready var success_node: TextureRect = $ColorRect/success
@@ -86,6 +89,10 @@ func _on_button_node_pressed() -> void:
 		else:
 			success_node.visible = true
 			fall_node.visible = false
+			camera_2d.shake_mode = true
+			life_manager.change_life()
+			await get_tree().create_timer(0.5).timeout
+			success_node.visible = false
 	elif mark_state == MARK_STATES.FALL:
 		success_node.hide()
 		fall_node.visible = !fall_node.visible
@@ -99,10 +106,17 @@ func _on_toggle_mode(_toggle_mode:int) -> void:
 			mark_state = MARK_STATES.FALL
 
 
-func check_correct():
+func check_correct() -> bool:
 	if is_correct && success_node.visible:
 		return is_correct
+	return !is_correct
 
 
-func correct_row():
+func correct_row() -> void:
 	print("correct row")
+
+
+func lock_correct_head() -> void:
+	button_node.modulate = Color(255, 255, 255, 0.4)
+	color_rect.modulate = Color(255, 255, 255, 0.4)
+	
