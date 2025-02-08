@@ -18,43 +18,33 @@ func _on_signal_create_grid(_grid_size, _row_target, _col_target, _row_target_in
 	columns = _grid_size + 1
 	grid_head_node = []
 
-	var temp_target_indices := []
 	var target_indices := []
-	var target_index = 0
-	
-	for idx in _row_target_indices.size():
-		for jdx in _row_target_indices[idx].size():
-			temp_target_indices.append(_row_target_indices[idx][jdx])
-	
-	for idx in _grid_size:
-		for jdx in _grid_size:
-			if temp_target_indices.size() > target_index:
-				if temp_target_indices[target_index] == jdx:
-					target_indices.append(1)
-					target_index += 1
-				else:
-					target_indices.append(0)
-			else:
-				target_indices.append(0)
+
+	for row_index in range(_grid_size):
+		var row = []
+		for col_index in range(_grid_size):
+			row.append(0)
+		target_indices.append(row)
+
+	for row_index in range(_row_target_indices.size()):
+		for col_index in _row_target_indices[row_index]:
+			if col_index < _grid_size:
+				target_indices[row_index][col_index] = 1
 
 	for idx in _col_target:
 		_create_grid(0, idx, "answer", "")
 	_create_grid(0, 0, "empty", "") # グリッドの右上、空の部分用
 
-	var grid_data := []
-	for _row in _num_grid:
-		for _col in _row:
-			grid_data.append(_col)
-
 	var num := 1
-	for _row in grid_data.size():
-		if target_indices[_row] == 1:
-			_create_grid(num, grid_data[_row], "number", "correct")
-		else:
-			_create_grid(num, grid_data[_row], "number", "incorrect")
-		if _row % _grid_size == _grid_size - 1:
-			_create_grid(0, _row_target[_row / _grid_size], "answer", "")
-		num += 1
+	for row_index in range(_grid_size):
+		for col_index in range(_grid_size):
+			if target_indices[row_index][col_index] == 1:
+				_create_grid(num, _num_grid[row_index][col_index], "number", "correct")
+			else:
+				_create_grid(num, _num_grid[row_index][col_index], "number", "incorrect")
+			if col_index == _grid_size - 1:
+				_create_grid(0, _row_target[row_index], "answer", "")
+			num += 1
 
 
 func _on_signal_correct_check(_node: Node) -> void:
@@ -65,8 +55,6 @@ func _on_signal_correct_check(_node: Node) -> void:
 		var col_index = _node.col_index
 		var row_group = get_tree().get_nodes_in_group("row_group" + str(row_index))
 		var col_group = get_tree().get_nodes_in_group("col_group" + str(col_index))
-		#get_tree().call_group("row_group" + str(row_index), "correct_row")
-		#get_tree().call_group("col_group" + str(col_index), "enter_alert_mode")
 
 		for group_node in row_group:
 			if group_node.is_correct:

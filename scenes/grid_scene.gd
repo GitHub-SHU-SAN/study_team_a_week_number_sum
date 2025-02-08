@@ -6,7 +6,6 @@ signal signal_correct_check(node)
 @onready var camera_2d: Camera2D =  $"/root/Node/Camera2D"
 @onready var life_manager: Control = $"/root/Node/LifeManager"
 
-
 @onready var color_rect: ColorRect = $ColorRect
 @onready var success_node: TextureRect = $ColorRect/success
 @onready var fall_node: TextureRect = $ColorRect/fall

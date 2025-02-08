@@ -5,6 +5,9 @@ signal signal_marking_mode(mode)
 @onready var toggle_on: TextureRect = $ToggleOn
 @onready var toggle_off: TextureRect = $ToggleOff
 
+@onready var audio_button_enable: AudioStreamPlayer2D = $"/root/Node/AudioButtonEnable"
+@onready var audio_button_disable: AudioStreamPlayer2D = $"/root/Node/AudioButtonDisable"
+
 var toggle_mode: bool = false
 
 func _ready() -> void:
@@ -16,6 +19,10 @@ func _on_toggle_gui_input(event: InputEvent) -> void:
 		if event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 			toggle_mode = !toggle_mode
 			update_toggle_visibility()
+			if !toggle_mode:
+				audio_button_enable.play()
+			else:
+				audio_button_disable.play()
 			signal_marking_mode.emit(toggle_mode)
 
 

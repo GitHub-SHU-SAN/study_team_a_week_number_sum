@@ -19,9 +19,6 @@ func apply_shake() -> void:
 
 func _process(delta: float) -> void:
 
-	if Input.is_action_just_pressed("ui_accept"):
-		shake_mode = true
-
 	if shake_mode:
 		apply_shake()
 
