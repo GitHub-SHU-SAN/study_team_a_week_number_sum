@@ -5,13 +5,18 @@ signal signal_correct_check(node)
 @onready var control_node: Control = $"/root/Node/Control"
 @onready var camera_2d: Camera2D =  $"/root/Node/Camera2D"
 @onready var life_manager: Control = $"/root/Node/LifeManager"
+@onready var hint_manager: Control = $"/root/Node/HintManager"
+
 
 @onready var color_rect: ColorRect = $ColorRect
 @onready var success_node: TextureRect = $ColorRect/success
 @onready var fall_node: TextureRect = $ColorRect/fall
 @onready var button_node: Button
 
+@onready var audio_success_correct: AudioStreamPlayer2D = $"/root/Node/AudioSuccessCorrect"
+
 var is_correct: bool = false
+var is_lock: bool = false
 
 var grid_number: int = 0
 var row_index: int = 0
@@ -21,6 +26,7 @@ enum MARK_STATES {
 	NONE,
 	SUCCESS,
 	FALL,
+	HINT,
 }
 
 var mark_state: MARK_STATES = MARK_STATES.SUCCESS
@@ -78,19 +84,27 @@ func _on_button_node_pressed() -> void:
 	if button_node.disabled:
 		return
 
-	if mark_state == MARK_STATES.SUCCESS:
+	hint_manager.clear_massage()
+
+	if mark_state == MARK_STATES.HINT:
+		if is_correct:
+			hint_manager.succ_hint()
+		if !is_correct:
+			hint_manager.fall_hint()
+	elif mark_state == MARK_STATES.SUCCESS:
 		if is_correct:
 			button_node.modulate = Color(255, 255, 255, 0.3)
 			button_node.disabled = true
 			success_node.visible = true
 			fall_node.visible = false
 			signal_correct_check.emit(self)
+			audio_success_correct.play()
 		else:
 			success_node.visible = true
 			fall_node.visible = false
 			camera_2d.shake_mode = true
 			life_manager.change_life()
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(0.2).timeout
 			success_node.visible = false
 	elif mark_state == MARK_STATES.FALL:
 		success_node.hide()
@@ -103,6 +117,8 @@ func _on_toggle_mode(_toggle_mode:int) -> void:
 			mark_state = MARK_STATES.SUCCESS
 		1:
 			mark_state = MARK_STATES.FALL
+		2:
+			mark_state = MARK_STATES.HINT
 
 
 func check_correct() -> bool:
@@ -111,11 +127,12 @@ func check_correct() -> bool:
 	return !is_correct
 
 
-func correct_row() -> void:
-	print("correct row")
+func check_lock() -> bool:
+	return is_lock
 
 
 func lock_correct_head() -> void:
+	is_lock = true
 	button_node.modulate = Color(255, 255, 255, 0.4)
 	color_rect.modulate = Color(255, 255, 255, 0.4)
 	

@@ -1,16 +1,99 @@
-[gd_scene load_steps=12 format=3 uid="uid://b6dbxm5xwihnj"]
+[gd_scene load_steps=41 format=3 uid="uid://b6dbxm5xwihnj"]
 
 [ext_resource type="Script" path="res://sources/node.gd" id="1_y20sc"]
-[ext_resource type="Texture2D" uid="uid://kb2pnokprtc8" path="res://images/00_ゲーム開始時.png" id="2_awro4"]
 [ext_resource type="Script" path="res://sources/grid_container.gd" id="2_p7l0a"]
 [ext_resource type="Script" path="res://sources/camera_2d.gd" id="2_r0pns"]
+[ext_resource type="Texture2D" uid="uid://dsk4qvfk0xmee" path="res://images/background.png" id="3_bye6f"]
 [ext_resource type="Script" path="res://sources/control.gd" id="3_hfjw5"]
-[ext_resource type="Texture2D" uid="uid://bhgv8ooqycm2e" path="res://images/life.png" id="3_thoek"]
+[ext_resource type="Texture2D" uid="uid://kb2pnokprtc8" path="res://images/00_ゲーム開始時.png" id="4_7hbje"]
 [ext_resource type="Texture2D" uid="uid://b2fpwwq2vymep" path="res://images/toggle_on.png" id="4_sj1c1"]
 [ext_resource type="Script" path="res://sources/life_manager.gd" id="4_tj1vn"]
+[ext_resource type="Script" path="res://sources/hint_manager.gd" id="6_efmsd"]
 [ext_resource type="Texture2D" uid="uid://bed21sw03fqoh" path="res://images/toggle_off.png" id="6_twwxf"]
-[ext_resource type="AudioStream" uid="uid://cgxg161tm4m1g" path="res://sounds/選択4.mp3" id="10_42e1b"]
-[ext_resource type="AudioStream" uid="uid://bubbijtvdix33" path="res://sounds/選択3.mp3" id="11_n6hy6"]
+[ext_resource type="PackedScene" uid="uid://bcki7foxy86iv" path="res://scenes/chara_live_2d.tscn" id="7_tupqm"]
+[ext_resource type="Script" path="res://sources/game_over_screen.gd" id="11_dtpwx"]
+[ext_resource type="FontFile" uid="uid://b2t1pq7xrww1l" path="res://fonts/x12y12pxMaruMinya.ttf" id="12_3l3lu"]
+[ext_resource type="AudioStream" uid="uid://qgumcd01o0he" path="res://sounds/casual-click-pop-ui-6-262122.mp3" id="12_pbsps"]
+[ext_resource type="AudioStream" uid="uid://cp1kjxwvdbhtx" path="res://sounds/casual-click-pop-ui-3-262120.mp3" id="13_tyr5u"]
+[ext_resource type="Script" path="res://sources/complete_screen.gd" id="14_2lbmy"]
+[ext_resource type="AudioStream" uid="uid://6f7hupn6qxb0" path="res://sounds/minimal-pop-click-ui-3-198303.mp3" id="14_855xt"]
+[ext_resource type="AudioStream" uid="uid://dv74g2bjtvdgu" path="res://sounds/FallCorrect.mp3" id="14_yugam"]
+[ext_resource type="AudioStream" uid="uid://5numjycwgked" path="res://sounds/GameOver.mp3" id="15_fup8w"]
+[ext_resource type="AudioStream" uid="uid://cjtoevuvu1njv" path="res://sounds/servant-bell-ring-2-211683.mp3" id="15_hgwwi"]
+[ext_resource type="AudioStream" uid="uid://bltpxrbybj0si" path="res://sounds/Hint.mp3" id="20_ad0lg"]
+[ext_resource type="AudioStream" uid="uid://beqt5o13a0jgs" path="res://sounds/cute-level-up-2-189851.mp3" id="20_xvmdg"]
+
+[sub_resource type="Animation" id="Animation_caibm"]
+resource_name = "idle_anim"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_irk0t"]
+_data = {
+"idle_anim": SubResource("Animation_caibm")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oh5vg"]
+bg_color = Color(0, 0, 0, 0.501961)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iuanw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2sjev"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_52syl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_edp7d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8orb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_443he"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jh8nj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ifuct"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_laj2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2414o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h074a"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bcach"]
+font_size = 80
+font_color = Color(0.78177, 0.564605, 0.119664, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wdsas"]
+draw_center = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vbb5k"]
+bg_color = Color(0.682353, 0.682353, 0.682353, 0.705882)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.230315, 0.230315, 0.230315, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8vtug"]
+bg_color = Color(0.141176, 0.141176, 0.141176, 0.705882)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_blend = true
 
 [node name="Node" type="Node2D"]
 script = ExtResource("1_y20sc")
@@ -20,40 +103,48 @@ anchor_mode = 0
 script = ExtResource("2_r0pns")
 
 [node name="BgColor" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(1200, 1200)
+custom_minimum_size = Vector2(1280, 960)
 offset_left = -50.0
 offset_top = -50.0
-offset_right = 1350.0
-offset_bottom = 950.0
+offset_right = 1330.0
+offset_bottom = 1010.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0.843137, 0.843137, 0.843137, 1)
+color = Color(0.485704, 0.485703, 0.485703, 1)
 
-[node name="00ゲーム開始時" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.784314)
-position = Vector2(591, 544)
-scale = Vector2(0.495626, 0.495626)
-texture = ExtResource("2_awro4")
+[node name="BgSprite" type="Sprite2D" parent="."]
+position = Vector2(640, 480)
+texture = ExtResource("3_bye6f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(688, 496)
+texture = ExtResource("4_7hbje")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_irk0t")
+}
 
 [node name="LifeManager" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 1075.0
-offset_top = 86.0
-offset_right = 1115.0
-offset_bottom = 126.0
+offset_left = 1026.0
+offset_top = 32.0
+offset_right = 1026.0
+offset_bottom = 32.0
 script = ExtResource("4_tj1vn")
 
-[node name="Life" type="Sprite2D" parent="LifeManager"]
-scale = Vector2(0.945313, 1)
-texture = ExtResource("3_thoek")
-hframes = 2
-
-[node name="Life2" type="Sprite2D" parent="LifeManager"]
-position = Vector2(67, 0)
-scale = Vector2(0.945313, 1)
-texture = ExtResource("3_thoek")
-hframes = 2
+[node name="HintManager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1026.0
+offset_top = 104.0
+offset_right = 1026.0
+offset_bottom = 104.0
+grow_horizontal = 0
+script = ExtResource("6_efmsd")
 
 [node name="Control" type="Control" parent="."]
 unique_name_in_owner = true
@@ -72,6 +163,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+offset_left = -88.0
+offset_top = 36.0
+offset_right = -88.0
+offset_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/h_separation = 0
@@ -80,17 +175,16 @@ script = ExtResource("2_p7l0a")
 
 [node name="MenuButton" type="OptionButton" parent="Control"]
 layout_mode = 0
-offset_left = 26.0
-offset_top = 22.0
-offset_right = 145.0
-offset_bottom = 91.0
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 64.0
+offset_top = 32.0
+offset_right = 172.0
+offset_bottom = 96.0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 32
-flat = true
 selected = 0
 item_count = 7
 popup/item_0/text = "3×3"
@@ -109,183 +203,31 @@ popup/item_6/id = 6
 
 [node name="LineEdit" type="LineEdit" parent="Control"]
 layout_mode = 0
-offset_left = 175.0
-offset_top = 29.0
-offset_right = 468.0
-offset_bottom = 86.0
+offset_left = 184.0
+offset_top = 32.0
+offset_right = 477.0
+offset_bottom = 96.0
 theme_override_colors/font_color = Color(0.650128, 0.650128, 0.650128, 1)
 theme_override_font_sizes/font_size = 32
 placeholder_text = "整数のシード値"
 
 [node name="Button" type="Button" parent="Control"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-clip_contents = false
-custom_minimum_size = Vector2(0, 0)
-layout_direction = 0
 layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 26.0
+offset_left = 64.0
 offset_top = 104.0
-offset_right = 133.0
-offset_bottom = 138.0
-grow_horizontal = 1
-grow_vertical = 1
-rotation = 0.0
-scale = Vector2(1, 1)
-pivot_offset = Vector2(0, 0)
-size_flags_horizontal = 1
-size_flags_vertical = 1
-size_flags_stretch_ratio = 1.0
-localize_numeral_system = true
-tooltip_text = ""
-focus_neighbor_left = NodePath("")
-focus_neighbor_top = NodePath("")
-focus_neighbor_right = NodePath("")
-focus_neighbor_bottom = NodePath("")
-focus_next = NodePath("")
-focus_previous = NodePath("")
-focus_mode = 2
-mouse_filter = 0
-mouse_force_pass_scroll_events = true
-mouse_default_cursor_shape = 0
-theme = null
-theme_type_variation = &""
+offset_right = 172.0
+offset_bottom = 144.0
 theme_override_font_sizes/font_size = 18
-disabled = false
-toggle_mode = false
-button_pressed = false
-action_mode = 1
-button_mask = 1
-keep_pressed_outside = false
-button_group = null
-shortcut = null
-shortcut_feedback = true
-shortcut_in_tooltip = true
 text = "New Puzzle"
-icon = null
-flat = false
-alignment = 1
-text_overrun_behavior = 0
-autowrap_mode = 0
-clip_text = false
-icon_alignment = 0
-vertical_icon_alignment = 1
-expand_icon = false
-text_direction = 0
-language = ""
-script = null
 
 [node name="Button2" type="Button" parent="Control"]
-_import_path = NodePath("")
-unique_name_in_owner = false
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 2
-auto_translate_mode = 0
-editor_description = ""
-visible = true
-modulate = Color(1, 1, 1, 1)
-self_modulate = Color(1, 1, 1, 1)
-show_behind_parent = false
-top_level = false
-clip_children = 0
-light_mask = 1
-visibility_layer = 1
-z_index = 0
-z_as_relative = true
-y_sort_enabled = false
-texture_filter = 0
-texture_repeat = 0
-material = null
-use_parent_material = false
-clip_contents = false
-custom_minimum_size = Vector2(0, 0)
-layout_direction = 0
 layout_mode = 0
-anchors_preset = 0
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 26.0
-offset_top = 172.0
-offset_right = 133.0
-offset_bottom = 206.0
-grow_horizontal = 1
-grow_vertical = 1
-rotation = 0.0
-scale = Vector2(1, 1)
-pivot_offset = Vector2(0, 0)
-size_flags_horizontal = 1
-size_flags_vertical = 1
-size_flags_stretch_ratio = 1.0
-localize_numeral_system = true
-tooltip_text = ""
-focus_neighbor_left = NodePath("")
-focus_neighbor_top = NodePath("")
-focus_neighbor_right = NodePath("")
-focus_neighbor_bottom = NodePath("")
-focus_next = NodePath("")
-focus_previous = NodePath("")
-focus_mode = 2
-mouse_filter = 0
-mouse_force_pass_scroll_events = true
-mouse_default_cursor_shape = 0
-theme = null
-theme_type_variation = &""
+offset_left = 184.0
+offset_top = 104.0
+offset_right = 336.0
+offset_bottom = 144.0
 theme_override_font_sizes/font_size = 18
-disabled = false
-toggle_mode = false
-button_pressed = false
-action_mode = 1
-button_mask = 1
-keep_pressed_outside = false
-button_group = null
-shortcut = null
-shortcut_feedback = true
-shortcut_in_tooltip = true
 text = "Random Puzzle"
-icon = null
-flat = false
-alignment = 1
-text_overrun_behavior = 0
-autowrap_mode = 0
-clip_text = false
-icon_alignment = 0
-vertical_icon_alignment = 1
-expand_icon = false
-text_direction = 0
-language = ""
-script = null
 
 [node name="ToggleOn" type="TextureRect" parent="Control"]
 layout_mode = 1
@@ -294,9 +236,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -150.0
-offset_right = 150.0
+offset_left = -232.0
+offset_top = -136.0
+offset_right = 68.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("4_sj1c1")
@@ -311,20 +254,229 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -150.0
-offset_right = 150.0
+offset_left = -232.0
+offset_top = -136.0
+offset_right = 68.0
+offset_bottom = 14.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("6_twwxf")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Message" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HintLabel" type="RichTextLabel" parent="Message"]
+visible = false
+layout_mode = 0
+offset_left = 512.0
+offset_top = 32.0
+offset_right = 968.0
+offset_bottom = 160.0
+theme_override_constants/table_v_separation = 0
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("12_3l3lu")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_oh5vg")
+text = "ヒントが欲しいの？
+知りたいマスをクリック・タップしてね"
+
+[node name="HintLabel2" type="RichTextLabel" parent="Message"]
+visible = false
+layout_mode = 0
+offset_left = 512.0
+offset_top = 32.0
+offset_right = 968.0
+offset_bottom = 160.0
+theme_override_constants/table_v_separation = 0
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("12_3l3lu")
+theme_override_font_sizes/normal_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_oh5vg")
+text = "これ以上は教えられないよ"
+
+[node name="SuccLabel" type="RichTextLabel" parent="Message"]
+visible = false
+layout_mode = 0
+offset_left = 512.0
+offset_top = 32.0
+offset_right = 968.0
+offset_bottom = 160.0
+theme_override_constants/table_v_separation = 0
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("12_3l3lu")
+theme_override_fonts/mono_font = ExtResource("12_3l3lu")
+theme_override_fonts/italics_font = ExtResource("12_3l3lu")
+theme_override_fonts/bold_italics_font = ExtResource("12_3l3lu")
+theme_override_fonts/bold_font = ExtResource("12_3l3lu")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_oh5vg")
+bbcode_enabled = true
+text = "うーん…
+そのマスはね…[color=green][b] 〇 [/b][/color]だね"
+
+[node name="FallLabel" type="RichTextLabel" parent="Message"]
+visible = false
+layout_mode = 0
+offset_left = 512.0
+offset_top = 32.0
+offset_right = 968.0
+offset_bottom = 160.0
+theme_override_constants/table_v_separation = 0
+theme_override_constants/text_highlight_v_padding = 0
+theme_override_constants/text_highlight_h_padding = 0
+theme_override_constants/outline_size = 4
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/line_separation = 8
+theme_override_fonts/normal_font = ExtResource("12_3l3lu")
+theme_override_fonts/mono_font = ExtResource("12_3l3lu")
+theme_override_fonts/italics_font = ExtResource("12_3l3lu")
+theme_override_fonts/bold_italics_font = ExtResource("12_3l3lu")
+theme_override_fonts/bold_font = ExtResource("12_3l3lu")
+theme_override_font_sizes/bold_italics_font_size = 24
+theme_override_font_sizes/italics_font_size = 24
+theme_override_font_sizes/mono_font_size = 24
+theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/bold_font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_oh5vg")
+bbcode_enabled = true
+text = "うーん…
+そのマスはね…きっと[color=red][b] × [/b][/color]だね"
+
+[node name="CharaLive2D" parent="." instance=ExtResource("7_tupqm")]
+position = Vector2(712, 112)
+
+[node name="Button" type="Button" parent="CharaLive2D"]
+offset_left = 416.667
+offset_top = 173.333
+offset_right = 916.667
+offset_bottom = 1473.33
+theme_override_styles/focus = SubResource("StyleBoxEmpty_iuanw")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2sjev")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_52syl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_edp7d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a8orb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_443he")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jh8nj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_ifuct")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_laj2j")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2414o")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_h074a")
+
+[node name="GameOverScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("11_dtpwx")
+
+[node name="ColorRect" type="ColorRect" parent="GameOverScreen"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 960.0
+color = Color(0, 0, 0, 0.745098)
+
+[node name="Label" type="Label" parent="GameOverScreen"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 344.0
+offset_right = 880.0
+offset_bottom = 464.0
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_bcach")
+
+[node name="Button" type="Button" parent="GameOverScreen"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 512.0
+offset_right = 832.0
+offset_bottom = 576.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_wdsas")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vbb5k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8vtug")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vtug")
+text = "Retry"
+
+[node name="CompleteScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("14_2lbmy")
+
+[node name="ColorRect" type="ColorRect" parent="CompleteScreen"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 960.0
+color = Color(0, 0, 0, 0.745098)
+
+[node name="Label" type="Label" parent="CompleteScreen"]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 344.0
+offset_right = 880.0
+offset_bottom = 464.0
+text = "Complete"
+label_settings = SubResource("LabelSettings_bcach")
+
+[node name="Button" type="Button" parent="CompleteScreen"]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 512.0
+offset_right = 832.0
+offset_bottom = 576.0
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxFlat_wdsas")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vbb5k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8vtug")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8vtug")
+text = "Next Puzzle"
+
 [node name="AudioButtonDisable" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("10_42e1b")
+stream = ExtResource("12_pbsps")
 
 [node name="AudioButtonEnable" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_n6hy6")
+stream = ExtResource("13_tyr5u")
+
+[node name="AudioSuccessCorrect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_855xt")
+
+[node name="AudioLineCorrect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_hgwwi")
+
+[node name="AudioFallCorrect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_yugam")
+
+[node name="AudioGameOver" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_fup8w")
+
+[node name="AudioComplete" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_xvmdg")
+
+[node name="AudioHint" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("20_ad0lg")
+volume_db = -12.236
 
 [connection signal="item_selected" from="Control/MenuButton" to="." method="_on_menu_button_item_selected"]
 [connection signal="text_change_rejected" from="Control/LineEdit" to="." method="_on_text_edit_text_change_rejected"]
@@ -334,3 +486,6 @@ stream = ExtResource("11_n6hy6")
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="gui_input" from="Control/ToggleOn" to="Control" method="_on_toggle_gui_input"]
 [connection signal="gui_input" from="Control/ToggleOff" to="Control" method="_on_toggle_gui_input"]
+[connection signal="pressed" from="CharaLive2D/Button" to="HintManager" method="_on_button_pressed"]
+[connection signal="pressed" from="GameOverScreen/Button" to="GameOverScreen" method="_on_button_pressed"]
+[connection signal="pressed" from="CompleteScreen/Button" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,2560 @@
+[gd_scene load_steps=52 format=3 uid="uid://bcki7foxy86iv"]
+
+[ext_resource type="Texture2D" uid="uid://dacclwg51rny" path="res://images/chara0012/chara_0012_0000_首.png" id="1_1skvq"]
+[ext_resource type="Texture2D" uid="uid://dl78dc86sbymn" path="res://images/chara0012/chara_0012_0000_髪後ろ.png" id="1_b3jls"]
+[ext_resource type="Script" path="res://sources/chara_live_2d.gd" id="1_jkcia"]
+[ext_resource type="Texture2D" uid="uid://beddmonhte7g3" path="res://images/chara0012/chara_0012_0000_顔ベース.png" id="2_ncec7"]
+[ext_resource type="Texture2D" uid="uid://3c3kaihsiq7g" path="res://images/chara0012/chara_0012_0000_右足.png" id="2_p6dgu"]
+[ext_resource type="Texture2D" uid="uid://k8pqy6r4er02" path="res://images/chara0012/chara_0012_0000_口鼻.png" id="3_r21xn"]
+[ext_resource type="Texture2D" uid="uid://cm3cjpvkgfyj1" path="res://images/chara0012/chara_0012_0000_左足.png" id="3_volm1"]
+[ext_resource type="Texture2D" uid="uid://cebjbd14bbbfu" path="res://images/chara0012/chara_0012_0000_左眉.png" id="4_djwfq"]
+[ext_resource type="Texture2D" uid="uid://da4pyh3ayhb5" path="res://images/chara0012/chara_0012_0000_スカート.png" id="4_oiarm"]
+[ext_resource type="Texture2D" uid="uid://ccaefh2k6prr5" path="res://images/chara0012/chara_0012_0000_胴体.png" id="5_77j55"]
+[ext_resource type="Texture2D" uid="uid://um1ouw20o2ko" path="res://images/chara0012/chara_0012_0000_右眉.png" id="5_g6dm0"]
+[ext_resource type="Texture2D" uid="uid://djdrda8371wh8" path="res://images/chara0012/chara_0012_0000_左二重.png" id="6_mmbeg"]
+[ext_resource type="Texture2D" uid="uid://byntptwmmxkwa" path="res://images/chara0012/chara_0012_0000_左上腕.png" id="6_nhv5o"]
+[ext_resource type="Texture2D" uid="uid://cu36eeki6a0qk" path="res://images/chara0012/chara_0012_0000_左下腕.png" id="7_i55vl"]
+[ext_resource type="Texture2D" uid="uid://c5812n7ko0h4c" path="res://images/chara0012/chara_0012_0000_右二重.png" id="7_r4cdk"]
+[ext_resource type="Texture2D" uid="uid://c7ehrhtk6xe1i" path="res://images/chara0012/chara_0012_0000_左手.png" id="8_c7n22"]
+[ext_resource type="Texture2D" uid="uid://bsxitq74xb74e" path="res://images/chara0012/chara_0012_0000_左白目.png" id="8_tio1w"]
+[ext_resource type="Texture2D" uid="uid://cag2pthkme6kp" path="res://images/chara0012/chara_0012_0000_右白目.png" id="9_0bw2u"]
+[ext_resource type="Texture2D" uid="uid://0c0acxjds3pk" path="res://images/chara0012/chara_0012_0000_右上腕.png" id="9_t3587"]
+[ext_resource type="Texture2D" uid="uid://ocsuvft3vm7f" path="res://images/chara0012/chara_0012_0000_右下腕.png" id="10_1d64w"]
+[ext_resource type="Texture2D" uid="uid://i14j8afpglaw" path="res://images/chara0012/chara_0012_0000_左黒目.png" id="10_gqp4n"]
+[ext_resource type="Texture2D" uid="uid://dr2naqatnumc1" path="res://images/chara0012/chara_0012_0000_右黒目.png" id="11_nejg4"]
+[ext_resource type="Texture2D" uid="uid://c2l26dvyhe68p" path="res://images/chara0012/chara_0012_0000_ポケット.png" id="11_qlxob"]
+[ext_resource type="Texture2D" uid="uid://fg4c7j7ode6k" path="res://images/chara0012/chara_0012_0000_髪前.png" id="12_ydwyv"]
+[ext_resource type="Texture2D" uid="uid://ccj7ppsvjktel" path="res://images/chara0012/chara_0012_0000_左目ハイライト.png" id="13_d2fxr"]
+[ext_resource type="Texture2D" uid="uid://dktgsoivgu4ag" path="res://images/chara0012/chara_0012_0000_右目ハイライト.png" id="14_1c8uw"]
+[ext_resource type="Texture2D" uid="uid://c0r41w44mt51o" path="res://images/chara0012/chara_0012_0000_左目まつ毛.png" id="15_tb2m6"]
+[ext_resource type="Texture2D" uid="uid://dtcamy8ytwji1" path="res://images/chara0012/chara_0012_0000_右目まつ毛.png" id="16_u2iuk"]
+[ext_resource type="Script" path="res://sources/まばたきアニメーション.gd" id="17_edeqs"]
+[ext_resource type="Texture2D" uid="uid://38sau0dml1sf" path="res://images/chara0012/chara_0012_0000_スカウター.png" id="17_kbaq4"]
+[ext_resource type="Texture2D" uid="uid://bm4tajpbpdgbh" path="res://images/chara0012/chara_0012_0012_左まばたき_00.png" id="17_qbiko"]
+[ext_resource type="Texture2D" uid="uid://dm81ffkukuyo" path="res://images/chara0012/chara_0012_0012_左まばたき_01.png" id="18_h3kba"]
+[ext_resource type="Texture2D" uid="uid://b2c4pxon4iha" path="res://images/chara0012/chara_0012_0000_スカウターレンズ.png" id="18_hwiwb"]
+[ext_resource type="Texture2D" uid="uid://ddcwhit7fgl7m" path="res://images/chara0012/chara_0012_0012_左まばたき_02.png" id="19_3r1is"]
+[ext_resource type="Texture2D" uid="uid://bagq020m7b7bw" path="res://images/chara0012/chara_0012_0012_右まばたき_00.png" id="20_2upng"]
+[ext_resource type="Texture2D" uid="uid://edd5gdogmwix" path="res://images/chara0012/chara_0012_0012_右まばたき_01.png" id="21_2t5ip"]
+[ext_resource type="Texture2D" uid="uid://bse2a0m6mhyns" path="res://images/chara0012/chara_0012_0012_右まばたき_02.png" id="22_aad58"]
+[ext_resource type="Texture2D" uid="uid://34gv07bbuh17" path="res://images/chara0012/chara_0012_0000_リボン.png" id="24_gs403"]
+[ext_resource type="Texture2D" uid="uid://c0ocu11m0t0nj" path="res://images/chara0012/chara_0012_0002_表情笑顔.png" id="24_lpj0v"]
+[ext_resource type="Texture2D" uid="uid://bkyfty2qi2g4c" path="res://images/chara0012/chara_0012_0002_表情おどろき.png" id="25_o0crx"]
+[ext_resource type="Script" path="res://sources/chara_animation_player.gd" id="38_o3pl2"]
+
+[sub_resource type="Animation" id="Animation_kd3po"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../通常目:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("左まばたき_00:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("左まばたき_01:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("左まばたき_02:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("右まばたき_00:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("右まばたき_01:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("右まばたき_02:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../左眉:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../右眉:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../表情/笑顔:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("../表情/おどろき:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ql3pp"]
+resource_name = "おどろき"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../左眉:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../右眉:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../通常目:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../表情/おどろき:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../表情/笑顔:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../目アニメーション")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.96667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"まばたき"],
+"method": &"change_motion"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_3yu8n"]
+resource_name = "まばたき"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../通常目:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("左まばたき_00:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("左まばたき_01:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.466667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("左まばたき_02:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("右まばたき_00:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("右まばたき_01:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.466667, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("右まばたき_02:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.466667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../表情/おどろき:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("../表情/笑顔:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_jb68g"]
+resource_name = "笑顔"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../通常目:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../左眉:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../右眉:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../表情/笑顔:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../表情/おどろき:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.96667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../目アニメーション")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.96667),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"まばたき"],
+"method": &"change_motion"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ua6i2"]
+_data = {
+"RESET": SubResource("Animation_kd3po"),
+"おどろき": SubResource("Animation_ql3pp"),
+"まばたき": SubResource("Animation_3yu8n"),
+"笑顔": SubResource("Animation_jb68g")
+}
+
+[sub_resource type="Animation" id="Animation_2u3r3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PolygonNodes/後ろ髪:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(687.5, 377.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(62.6346, 202.191)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0142447]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/腰:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-10, -35), Vector2(-10, -35)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/腰:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/腰/胸:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.1127, -134.786), Vector2(0.1127, -134.786)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/腰/胸:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.00857205, 0.0]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/腰/胸/首:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-0.0853016, -62.4999), Vector2(-0.0853016, -62.4999)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/腰/胸/首:rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/腰/胸/首/頭:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1.17788, -42.4837), Vector2(-0.987302, -43.6777)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/腰/胸/首/頭:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5708, -1.5708]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton2D/腰/胸/右上腕:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(109.036, -43.8892)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton2D/腰/胸/右上腕:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton2D/腰/胸/左上腕:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-102.548, -34.86), Vector2(-98.9908, -41.524)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton2D/腰/胸/左上腕:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.010472, 0.010472]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5.71572, 189.931), Vector2(-5.71572, 189.931)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.137881, 0.189792]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕/手:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-63.2639, 183.978), Vector2(-63.2639, 183.978)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕/手:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.220514]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/腰/スカート:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1.78814e-07, 97.5), Vector2(-1.78814e-07, 97.5)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/腰/スカート:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.0273996]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D/腰/スカート/左足:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-64.9923, 522.903), Vector2(-64.9923, 522.903)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/腰/スカート/左足:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/腰/スカート/左足/左下足:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-29.4366, 412.541), Vector2(-29.4366, 412.541)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Skeleton2D/腰/スカート/左足/左下足:rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Skeleton2D/腰/スカート/右足:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(67.5041, 520.222), Vector2(67.5041, 520.222)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Skeleton2D/腰/スカート/右足:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Skeleton2D/腰/スカート/右足/右下足:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(23.6859, 413.304), Vector2(23.6859, 413.304)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Skeleton2D/腰/スカート/右足/右下足:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Skeleton2D/腰/スカート/白衣右すそ:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(174.452, 387.425), Vector2(167.576, 387.505)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Skeleton2D/腰/スカート/白衣右すそ:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Skeleton2D/腰/スカート/白衣左すそ:position")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-180.895, 395.193), Vector2(-173.502, 395.356)]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Skeleton2D/腰/スカート/白衣左すそ:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0, 0.001),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("PolygonNodes/後ろ髪:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("PolygonNodes/頭/前髪:rotation")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("PolygonNodes/頭/前髪:position")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, -650)]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("PolygonNodes/頭/左眉:visible")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("PolygonNodes/頭/右眉:visible")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("PolygonNodes/頭/通常目:visible")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("PolygonNodes/頭/まばたき:visible")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("PolygonNodes/頭/表情/笑顔:visible")
+tracks/40/interp = 1
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("PolygonNodes/頭/表情/おどろき:visible")
+tracks/41/interp = 1
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_nhiw3"]
+resource_name = "がっかり"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/腰/胸/首/頭:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.26667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.5708, -1.49341, -1.64267]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/腰/胸/首/頭:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.03333, 1.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-1.17788, -42.4837), Vector2(5.41583, -39.74), Vector2(-1.17788, -42.4837), Vector2(-3.78198, -43.101)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/腰/胸/首:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-0.0853016, -62.4999), Vector2(-0.0853016, -62.4999)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/腰/胸/首:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.03333, 1.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0922743, 0.0, -0.0963319]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/腰/胸:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.633333, 1.43333, 1.46667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.1127, -134.786), Vector2(-5.02904, -139.64), Vector2(-0.103059, -142.283), Vector2(-10.0271, -139.496), Vector2(-7.60003, -142.067)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/腰/胸:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.633333, 1.43333, 1.46667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-0.00857205, -0.0256324, 0.000823466, 0.00376976, 0.00389252]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/腰/胸/右上腕:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(109.945, -40.1502), Vector2(109.851, -47.8444), Vector2(101.049, -60.8054)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/腰/胸/右上腕:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.00133388]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/腰/胸/左上腕:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-102.548, -34.86), Vector2(-102.68, -57.1786), Vector2(-99.0829, -70.9765)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("PolygonNodes/後ろ髪:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(687.5, 377.5), Vector2(687.5, 377.5)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PolygonNodes/後ろ髪:rotation")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 0.533333, 0.633333, 1.46667, 1.63333, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0314754, -0.00265459, 0.102916, 0.121884, 0.0438941]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("PolygonNodes/頭/前髪:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.633333, 1.63333, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0272748, 0.128741, 0.0943454]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("PolygonNodes/頭/前髪:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(20, -650)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("PolygonNodes/頭/左眉:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("PolygonNodes/頭/右眉:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("PolygonNodes/頭/通常目:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("PolygonNodes/頭/まばたき:visible")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("PolygonNodes/頭/表情/笑顔:visible")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("PolygonNodes/頭/表情/おどろき:visible")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(62.6346, 202.191)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.966667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, -0.147513]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D/腰/胸/左上腕:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0304452, 0.070626]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.533333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.137881, 0.184914]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕/手:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ir6um"]
+resource_name = "くびふり"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/腰/胸:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-0.00857205, 0.100048, -0.0867503]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/腰/胸:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.133333, 0.266667, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 2.63902, 1, 2.63902, 1),
+"update": 0,
+"values": [Vector2(0.1127, -134.786), Vector2(0.328412, -127.289), Vector2(0.113, -134.786), Vector2(0.328412, -127.289), Vector2(0.113, -134.786)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/腰/胸/首:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.0853016, -62.4999)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/腰/胸/首:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0571442, -0.0519683]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/腰/胸/首/頭:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.17788, -42.4837)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/腰/胸/首/頭:rotation")
+tracks/5/interp = 2
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.5708, -1.53589, -1.62316]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("PolygonNodes/後ろ髪:rotation")
+tracks/6/interp = 2
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.105284, 0.0703647]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("PolygonNodes/頭/前髪:rotation")
+tracks/7/interp = 2
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.0872665, 0.0872665]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("PolygonNodes/頭/前髪:position")
+tracks/8/interp = 2
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(20, -650), Vector2(9.99994, -652.5), Vector2(27.4999, -652.5)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:rotation")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0387272, -0.0368883]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(63.5504, 204.791), Vector2(60.8102, 199.498)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton2D/腰/胸/右上腕:rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 0.433333, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.130864, 0.04917]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton2D/腰/スカート/白衣右すそ:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0, 0.233333, 0.933333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(174.452, 387.425), Vector2(170.867, 393.217), Vector2(169.2, 377.637)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton2D/腰/スカート/白衣右すそ:rotation")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton2D/腰/スカート/白衣左すそ:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0, 0.266667, 0.366667, 0.466667, 1.06667, 1.16667, 1.26667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-180.895, 395.193), Vector2(-180.895, 395.193), Vector2(-172.534, 407.044), Vector2(-180.895, 395.193), Vector2(-180.895, 395.193), Vector2(-170.566, 413.341), Vector2(-180.895, 395.193)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton2D/腰/スカート/白衣左すそ:rotation")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton2D/腰/胸/左上腕:position")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-102.548, -34.86)]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/腰/胸/左上腕:rotation")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.366667, 0.833333, 1.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.010472, 0.10472, -0.0698132, 0.174533, 0.0]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0, 0.366667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.137881, -0.0910797]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5.71572, 189.931)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕/手:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0, 0.366667, 0.833333, 1.06667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.18614, 0.0662893, -0.166159]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D/腰/スカート:rotation")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0, 1.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0273996, -0.0444219]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/腰/スカート/左足:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0, 0.366667, 1.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0130581, 0.0293121]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/腰/スカート/右足:rotation")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0, 0.366667, 1.06667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.014863, 0.0368497]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("PolygonNodes/頭/通常目/左黒目:position")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0, 0.366667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-640, -900), Vector2(-645, -900), Vector2(-637.5, -900)]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("PolygonNodes/頭/通常目/左目ハイライト:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0, 0.366667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-640, -900), Vector2(-647.5, -900), Vector2(-640, -900)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("PolygonNodes/頭/通常目/右黒目:position")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0, 0.366667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-640, -900), Vector2(-645, -900), Vector2(-635, -900)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("PolygonNodes/頭/通常目/右目ハイライト:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0, 0.366667, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-640, -900), Vector2(-645, -900), Vector2(-635, -900)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("PolygonNodes/頭/表情/おどろき:visible")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("PolygonNodes/頭/表情/笑顔:visible")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("PolygonNodes/頭/まばたき:visible")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("PolygonNodes/頭/通常目:visible")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_868uy"]
+resource_name = "アイドル"
+length = 6.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Skeleton2D/腰/胸/右上腕:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(109.036, -43.8892), Vector2(108.011, -48.1054)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Skeleton2D/腰/胸/左上腕:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-98.9908, -41.524), Vector2(-94.9797, -49.0384)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕/手:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-63.2639, 183.978), Vector2(-63.2639, 183.978)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-5.71572, 189.931), Vector2(-5.71572, 189.931)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(62.6346, 202.191), Vector2(62.6346, 202.191)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.189792, 0.189792]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Skeleton2D/腰/胸/左上腕/左下腕/手:rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.220514, -0.220514]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Skeleton2D/腰/胸/右上腕/右下腕:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.0142447, -0.0303074]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Skeleton2D/腰/スカート/白衣右すそ:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(167.576, 387.505), Vector2(159.823, 387.595)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Skeleton2D/腰/スカート/白衣左すそ:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-180.895, 395.193), Vector2(-165.166, 395.539)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("PolygonNodes/後ろ髪:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(687.5, 377.5), Vector2(687.5, 372.5)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Skeleton2D/腰/胸/首/頭:position")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-0.987302, -43.6777), Vector2(-0.772403, -45.024)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Skeleton2D/腰/胸/首:rotation")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Skeleton2D/腰:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-10, -35)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Skeleton2D/腰:rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Skeleton2D/腰/胸:position")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.1127, -134.786)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Skeleton2D/腰/胸:rotation")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Skeleton2D/腰/胸/首:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-0.0853016, -62.4999)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Skeleton2D/腰/胸/首/頭:rotation")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1.5708]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Skeleton2D/腰/胸/右上腕:rotation")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Skeleton2D/腰/胸/左上腕:rotation")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.010472]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Skeleton2D/腰/スカート:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-1.78814e-07, 97.5)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Skeleton2D/腰/スカート:rotation")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Skeleton2D/腰/スカート/左足:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-64.9923, 522.903)]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Skeleton2D/腰/スカート/左足:rotation")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Skeleton2D/腰/スカート/左足/左下足:position")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-29.4366, 412.541)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Skeleton2D/腰/スカート/左足/左下足:rotation")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Skeleton2D/腰/スカート/右足:position")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(67.5041, 520.222)]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Skeleton2D/腰/スカート/右足:rotation")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Skeleton2D/腰/スカート/右足/右下足:position")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(23.6859, 413.304)]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Skeleton2D/腰/スカート/右足/右下足:rotation")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Skeleton2D/腰/スカート/白衣右すそ:rotation")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Skeleton2D/腰/スカート/白衣左すそ:rotation")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("PolygonNodes/後ろ髪:rotation")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hd2cw"]
+_data = {
+"RESET": SubResource("Animation_2u3r3"),
+"がっかり": SubResource("Animation_nhiw3"),
+"くびふり": SubResource("Animation_ir6um"),
+"アイドル": SubResource("Animation_868uy")
+}
+
+[node name="CharaLive2D" type="Node2D"]
+position = Vector2(296, 216)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_jkcia")
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="PolygonNodes" type="Node2D" parent="."]
+
+[node name="後ろ髪" type="Polygon2D" parent="PolygonNodes"]
+position = Vector2(687.5, 377.5)
+offset = Vector2(-687.5, -376.274)
+texture = ExtResource("1_b3jls")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(660.779, 181.11, 695.853, 183.337, 733.71, 197.811, 763.216, 222.307, 787.712, 267.959, 796.62, 343.117, 809.981, 437.76, 792.166, 498.443, 766.557, 514.031, 777.691, 482.855, 749.298, 516.815, 738.164, 510.691, 757.092, 494.546, 733.153, 510.691, 742.061, 488.979, 725.916, 509.021, 730.926, 492.876, 706.43, 516.258, 712.554, 495.103, 690.285, 516.815, 693.069, 495.103, 674.697, 519.042, 609.003, 491.206, 609.003, 513.475, 583.394, 474.504, 601.766, 506.794, 588.961, 518.485, 582.837, 498.443, 580.054, 518.485, 548.877, 475.617, 568.362, 507.351, 558.898, 517.372, 537.742, 483.968, 543.31, 517.372, 524.381, 501.784, 504.339, 455.019, 511.576, 413.821, 522.711, 363.716, 524.938, 296.909, 537.742, 238.452, 577.827, 197.811, 629.045, 172.759)
+uv = PackedVector2Array(660.779, 181.11, 695.853, 183.337, 733.71, 197.811, 763.216, 222.307, 787.712, 267.959, 796.62, 343.117, 809.981, 437.76, 792.166, 498.443, 766.557, 514.031, 777.691, 482.855, 749.298, 516.815, 738.164, 510.691, 757.092, 494.546, 733.153, 510.691, 742.061, 488.979, 725.916, 509.021, 730.926, 492.876, 706.43, 516.258, 712.554, 495.103, 690.285, 516.815, 693.069, 495.103, 674.697, 519.042, 609.003, 491.206, 609.003, 513.475, 583.394, 474.504, 601.766, 506.794, 588.961, 518.485, 582.837, 498.443, 580.054, 518.485, 548.877, 475.617, 568.362, 507.351, 558.898, 517.372, 537.742, 483.968, 543.31, 517.372, 524.381, 501.784, 504.339, 455.019, 511.576, 413.821, 522.711, 363.716, 524.938, 296.909, 537.742, 238.452, 577.827, 197.811, 629.045, 172.759)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="頭" type="Node2D" parent="PolygonNodes"]
+position = Vector2(642.5, 900)
+
+[node name="首" type="Polygon2D" parent="PolygonNodes/頭"]
+position = Vector2(-642.5, -900)
+texture = ExtResource("1_1skvq")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(627.809, 456.863, 684.395, 459.557, 685.069, 484.482, 714.035, 512.775, 693.826, 526.247, 606.927, 521.532, 592.107, 504.691, 626.462, 489.197)
+uv = PackedVector2Array(627.809, 456.863, 684.395, 459.557, 685.069, 484.482, 714.035, 512.775, 693.826, 526.247, 606.927, 521.532, 592.107, 504.691, 626.462, 489.197)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0.5, 0.5, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0.5, 0.5, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="顔ベース" type="Polygon2D" parent="PolygonNodes/頭"]
+position = Vector2(-642.5, -900)
+texture = ExtResource("2_ncec7")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(652.734, 226.568, 594.659, 237.975, 559.745, 282.569, 552.835, 322.325, 557.329, 383.165, 578.415, 430.524, 610.218, 467.858, 655.157, 490.673, 707.009, 465.438, 739.849, 426.376, 760.936, 343.412, 753.331, 283.954, 723.947, 241.092, 685.576, 227.265)
+uv = PackedVector2Array(652.734, 226.568, 594.659, 237.975, 559.745, 282.569, 552.835, 322.325, 557.329, 383.165, 578.415, 430.524, 610.218, 467.858, 655.157, 490.673, 707.009, 465.438, 739.849, 426.376, 760.936, 343.412, 753.331, 283.954, 723.947, 241.092, 685.576, 227.265)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="口鼻" type="Polygon2D" parent="PolygonNodes/頭"]
+position = Vector2(-640, -899.505)
+texture = ExtResource("3_r21xn")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(640.012, 412.751, 647.095, 402.234, 667.916, 405.453, 672.208, 432.713, 668.345, 455.465, 645.164, 457.182, 636.363, 449.455)
+uv = PackedVector2Array(640.012, 412.751, 647.095, 402.234, 667.916, 405.453, 672.208, 432.713, 668.345, 455.465, 645.164, 457.182, 636.363, 449.455)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左眉" type="Polygon2D" parent="PolygonNodes/頭"]
+visible = false
+position = Vector2(-640, -899.722)
+texture = ExtResource("4_djwfq")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(564.838, 337.379, 591.236, 326.207, 605.139, 323.228, 624.255, 327.034, 629.468, 332.248, 621.772, 332.744, 604.063, 328.193, 589.995, 331.503, 567.403, 341.185, 561.776, 342.013)
+uv = PackedVector2Array(564.838, 337.379, 591.236, 326.207, 605.139, 323.228, 624.255, 327.034, 629.468, 332.248, 621.772, 332.744, 604.063, 328.193, 589.995, 331.503, 567.403, 341.185, 561.776, 342.013)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右眉" type="Polygon2D" parent="PolygonNodes/頭"]
+visible = false
+position = Vector2(-640, -900.016)
+texture = ExtResource("5_g6dm0")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(684.915, 329.918, 705.442, 324.01, 714.855, 324.711, 729.874, 329.016, 747.297, 336.026, 750.602, 341.633, 744.794, 342.835, 725.068, 334.123, 709.347, 329.517, 702.238, 330.919, 687.719, 335.024)
+uv = PackedVector2Array(684.915, 329.918, 705.442, 324.01, 714.855, 324.711, 729.874, 329.016, 747.297, 336.026, 750.602, 341.633, 744.794, 342.835, 725.068, 334.123, 709.347, 329.517, 702.238, 330.919, 687.719, 335.024)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="目アニメーション" type="AnimationPlayer" parent="PolygonNodes/頭"]
+root_node = NodePath("../まばたき")
+libraries = {
+"": SubResource("AnimationLibrary_ua6i2")
+}
+autoplay = "RESET"
+script = ExtResource("17_edeqs")
+
+[node name="通常目" type="Node2D" parent="PolygonNodes/頭"]
+visible = false
+
+[node name="左二重" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640, -900)
+texture = ExtResource("6_mmbeg")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(599.479, 342.011, 608.917, 339.822, 617.124, 342.353, 622.664, 349.055, 611.858, 347.619, 606.866, 345.772, 597.428, 346.593)
+uv = PackedVector2Array(599.479, 342.011, 608.917, 339.822, 617.124, 342.353, 622.664, 349.055, 611.858, 347.619, 606.866, 345.772, 597.428, 346.593)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右二重" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640, -900)
+texture = ExtResource("7_r4cdk")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(691.988, 347.127, 698.375, 342.549, 706.74, 341.701, 713.523, 342.775, 715.388, 346.901, 708.493, 346.223, 702.953, 347.523, 696.623, 350.575, 691.14, 349.84)
+uv = PackedVector2Array(691.988, 347.127, 698.375, 342.549, 706.74, 341.701, 713.523, 342.775, 715.388, 346.901, 708.493, 346.223, 702.953, 347.523, 696.623, 350.575, 691.14, 349.84)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左白目" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640, -900)
+texture = ExtResource("8_tio1w")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(595.747, 351.529, 575.223, 364.857, 574.423, 391.379, 585.619, 399.642, 615.606, 403.64, 630.133, 394.977, 627.867, 362.724, 607.076, 348.864)
+uv = PackedVector2Array(595.747, 351.529, 575.223, 364.857, 574.423, 391.379, 585.619, 399.642, 615.606, 403.64, 630.133, 394.977, 627.867, 362.724, 607.076, 348.864)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右白目" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640, -900)
+texture = ExtResource("9_0bw2u")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(685.994, 361.852, 683.653, 373.169, 683.848, 403.219, 707.849, 404.975, 736.337, 396.585, 740.435, 380.389, 733.996, 358.73, 712.727, 350.144)
+uv = PackedVector2Array(685.994, 361.852, 683.653, 373.169, 683.848, 403.219, 707.849, 404.975, 736.337, 396.585, 740.435, 380.389, 733.996, 358.73, 712.727, 350.144)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左黒目" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-641.447, -900)
+texture = ExtResource("10_gqp4n")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(604.796, 354.126, 612.616, 357.54, 621.869, 367.013, 622.75, 378.027, 621.538, 392.566, 611.735, 399.836, 598.408, 400.387, 588.274, 393.778, 585.3, 379.569, 589.596, 361.285)
+uv = PackedVector2Array(604.796, 354.126, 612.616, 357.54, 621.869, 367.013, 622.75, 378.027, 621.538, 392.566, 611.735, 399.836, 598.408, 400.387, 588.274, 393.778, 585.3, 379.569, 589.596, 361.285)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右黒目" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640.263, -900)
+texture = ExtResource("11_nejg4")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(708.321, 355.43, 714.015, 357.49, 722.981, 362.821, 727.464, 373.725, 726.373, 385.114, 722.375, 396.625, 711.228, 401.229, 699.234, 400.017, 690.147, 391.293, 689.783, 377.36, 695.962, 359.913)
+uv = PackedVector2Array(708.321, 355.43, 714.015, 357.49, 722.981, 362.821, 727.464, 373.725, 726.373, 385.114, 722.375, 396.625, 711.228, 401.229, 699.234, 400.017, 690.147, 391.293, 689.783, 377.36, 695.962, 359.913)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左目ハイライト" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-643.947, -900)
+texture = ExtResource("13_d2fxr")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(608.68, 358.305, 597.328, 375.157, 586.507, 388.994, 598.037, 400.169, 616.84, 398.395, 621.985, 384.736, 613.825, 372.319, 618.082, 360.789)
+uv = PackedVector2Array(608.68, 358.305, 597.328, 375.157, 586.507, 388.994, 598.037, 400.169, 616.84, 398.395, 621.985, 384.736, 613.825, 372.319, 618.082, 360.789)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右目ハイライト" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640.263, -900)
+texture = ExtResource("14_1c8uw")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(695.06, 361.18, 697.658, 375.205, 690.645, 387.152, 697.658, 400.138, 709.345, 399.878, 720.513, 395.982, 724.668, 384.814, 710.384, 377.023, 709.085, 366.115, 698.956, 359.882)
+uv = PackedVector2Array(695.06, 361.18, 697.658, 375.205, 690.645, 387.152, 697.658, 400.138, 709.345, 399.878, 720.513, 395.982, 724.668, 384.814, 710.384, 377.023, 709.085, 366.115, 698.956, 359.882)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左まつ毛" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640, -900)
+texture = ExtResource("15_tb2m6")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(600.833, 356.784, 588.627, 363.017, 582.134, 377.561, 579.277, 389.508, 573.044, 386.392, 571.226, 368.731, 576.68, 356.524, 595.899, 345.356, 613.559, 346.395, 627.065, 356.005, 625.247, 371.328, 612.001, 362.757)
+uv = PackedVector2Array(600.833, 356.784, 588.627, 363.017, 582.134, 377.561, 579.277, 389.508, 573.044, 386.392, 571.226, 368.731, 576.68, 356.524, 595.899, 345.356, 613.559, 346.395, 627.065, 356.005, 625.247, 371.328, 612.001, 362.757)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右まつ毛" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
+position = Vector2(-640, -900)
+texture = ExtResource("16_u2iuk")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(689.981, 369.741, 702.753, 361.226, 713.219, 359.098, 724.927, 364.242, 728.475, 373.821, 732.023, 387.835, 737.876, 389.609, 740.005, 377.369, 743.198, 365.484, 736.28, 359.275, 723.685, 348.277, 698.673, 348.986, 692.11, 354.131, 685.724, 363.178)
+uv = PackedVector2Array(689.981, 369.741, 702.753, 361.226, 713.219, 359.098, 724.927, 364.242, 728.475, 373.821, 732.023, 387.835, 737.876, 389.609, 740.005, 377.369, 743.198, 365.484, 736.28, 359.275, 723.685, 348.277, 698.673, 348.986, 692.11, 354.131, 685.724, 363.178)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="まばたき" type="Node2D" parent="PolygonNodes/頭"]
+visible = false
+
+[node name="左まばたき_00" type="Polygon2D" parent="PolygonNodes/頭/まばたき"]
+visible = false
+position = Vector2(-640, -900)
+texture = ExtResource("17_qbiko")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(593.935, 335.732, 578.116, 347.774, 567.019, 367.371, 570.324, 388.384, 584.491, 404.203, 603.615, 407.036, 629.115, 403.967, 634.073, 379.176, 631.004, 346.829, 615.184, 336.913)
+uv = PackedVector2Array(593.935, 335.732, 578.116, 347.774, 567.019, 367.371, 570.324, 388.384, 584.491, 404.203, 603.615, 407.036, 629.115, 403.967, 634.073, 379.176, 631.004, 346.829, 615.184, 336.913)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左まばたき_01" type="Polygon2D" parent="PolygonNodes/頭/まばたき"]
+visible = false
+position = Vector2(-640, -900)
+texture = ExtResource("18_h3kba")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(584.451, 348.849, 569.196, 365.524, 566.358, 378.651, 574.518, 393.552, 589.773, 402.066, 610.35, 402.066, 623.477, 395.858, 632.524, 381.312, 637.136, 364.814, 629.331, 348.317, 610.528, 343.705)
+uv = PackedVector2Array(584.451, 348.849, 569.196, 365.524, 566.358, 378.651, 574.518, 393.552, 589.773, 402.066, 610.35, 402.066, 623.477, 395.858, 632.524, 381.312, 637.136, 364.814, 629.331, 348.317, 610.528, 343.705)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左まばたき_02" type="Polygon2D" parent="PolygonNodes/頭/まばたき"]
+visible = false
+position = Vector2(-640, -900)
+texture = ExtResource("19_3r1is")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(578.324, 356.941, 573.838, 380.08, 580.213, 400.149, 595.088, 406.288, 624.837, 402.982, 641.365, 387.163, 636.878, 355.761, 621.768, 348.678, 600.282, 346.317)
+uv = PackedVector2Array(578.324, 356.941, 573.838, 380.08, 580.213, 400.149, 595.088, 406.288, 624.837, 402.982, 641.365, 387.163, 636.878, 355.761, 621.768, 348.678, 600.282, 346.317)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右まばたき_00" type="Polygon2D" parent="PolygonNodes/頭/まばたき"]
+visible = false
+position = Vector2(-640, -900)
+texture = ExtResource("20_2upng")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(706.199, 335.799, 688.383, 345.673, 682.588, 360.483, 682.374, 388.601, 691.388, 399.333, 710.706, 403.411, 725.087, 400.836, 740.327, 383.879, 743.976, 364.99, 735.175, 354.044, 719.721, 339.663)
+uv = PackedVector2Array(706.199, 335.799, 688.383, 345.673, 682.588, 360.483, 682.374, 388.601, 691.388, 399.333, 710.706, 403.411, 725.087, 400.836, 740.327, 383.879, 743.976, 364.99, 735.175, 354.044, 719.721, 339.663)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右まばたき_01" type="Polygon2D" parent="PolygonNodes/頭/まばたき"]
+visible = false
+position = Vector2(-640, -900)
+texture = ExtResource("21_2t5ip")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(693.693, 344.366, 679.313, 354.025, 677.381, 368.191, 682.318, 379.567, 688.542, 392.016, 704.64, 399.743, 730.827, 401.031, 739.198, 391.587, 748.212, 369.694, 734.905, 361.322, 724.817, 347.8)
+uv = PackedVector2Array(693.693, 344.366, 679.313, 354.025, 677.381, 368.191, 682.318, 379.567, 688.542, 392.016, 704.64, 399.743, 730.827, 401.031, 739.198, 391.587, 748.212, 369.694, 734.905, 361.322, 724.817, 347.8)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右まばたき_02" type="Polygon2D" parent="PolygonNodes/頭/まばたき"]
+visible = false
+position = Vector2(-640, -900)
+texture = ExtResource("22_aad58")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(692.84, 348.754, 677.23, 360.462, 673.15, 378.556, 679.004, 395.053, 689.647, 404.455, 716.611, 404.277, 733.463, 397.004, 735.059, 375.54, 733.108, 356.382, 722.11, 351.238, 695.324, 345.916)
+uv = PackedVector2Array(692.84, 348.754, 677.23, 360.462, 673.15, 378.556, 679.004, 395.053, 689.647, 404.455, 716.611, 404.277, 733.463, 397.004, 735.059, 375.54, 733.108, 356.382, 722.11, 351.238, 695.324, 345.916)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="表情" type="Node2D" parent="PolygonNodes/頭"]
+position = Vector2(-640, -902.5)
+
+[node name="笑顔" type="Polygon2D" parent="PolygonNodes/頭/表情"]
+visible = false
+texture = ExtResource("24_lpj0v")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(590.994, 339.717, 558.01, 351.404, 559.049, 337.639, 600.084, 319.459, 636.444, 325.952, 679.038, 325.952, 709.424, 321.277, 733.059, 326.472, 761.108, 341.535, 752.018, 356.079, 721.371, 340.756, 721.891, 355.82, 736.954, 375.039, 742.408, 391.401, 738.513, 422.826, 712.281, 437.111, 683.972, 443.084, 672.285, 466.199, 649.17, 466.199, 622.939, 449.577, 622.679, 437.111, 588.397, 438.15, 573.333, 417.892, 565.022, 389.583, 580.345, 367.766, 593.071, 348.547)
+uv = PackedVector2Array(590.994, 339.717, 558.01, 351.404, 559.049, 337.639, 600.084, 319.459, 636.444, 325.952, 679.038, 325.952, 709.424, 321.277, 733.059, 326.472, 761.108, 341.535, 752.018, 356.079, 721.371, 340.756, 721.891, 355.82, 736.954, 375.039, 742.408, 391.401, 738.513, 422.826, 712.281, 437.111, 683.972, 443.084, 672.285, 466.199, 649.17, 466.199, 622.939, 449.577, 622.679, 437.111, 588.397, 438.15, 573.333, 417.892, 565.022, 389.583, 580.345, 367.766, 593.071, 348.547)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="おどろき" type="Polygon2D" parent="PolygonNodes/頭/表情"]
+texture = ExtResource("25_o0crx")
+skeleton = NodePath("../../../../Skeleton2D")
+polygon = PackedVector2Array(569.78, 321.326, 602.062, 312.184, 629.489, 324.754, 654.629, 389.034, 683.769, 325.897, 713.195, 312.469, 738.621, 318.755, 749.192, 335.896, 701.482, 332.468, 743.764, 363.893, 740.336, 391.034, 738.621, 413.032, 714.338, 438.744, 682.626, 429.316, 679.198, 463.599, 648.63, 470.455, 630.631, 446.172, 627.203, 428.173, 602.062, 437.887, 587.778, 426.459, 569.208, 404.175, 574.922, 391.605, 570.637, 370.178, 578.065, 354.18, 617.204, 333.896, 598.063, 327.04, 575.493, 336.467)
+uv = PackedVector2Array(569.78, 321.326, 602.062, 312.184, 629.489, 324.754, 654.629, 389.034, 683.769, 325.897, 713.195, 312.469, 738.621, 318.755, 749.192, 335.896, 701.482, 332.468, 743.764, 363.893, 740.336, 391.034, 738.621, 413.032, 714.338, 438.744, 682.626, 429.316, 679.198, 463.599, 648.63, 470.455, 630.631, 446.172, 627.203, 428.173, 602.062, 437.887, 587.778, 426.459, 569.208, 404.175, 574.922, 391.605, 570.637, 370.178, 578.065, 354.18, 617.204, 333.896, 598.063, 327.04, 575.493, 336.467)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="スカウター" type="Polygon2D" parent="PolygonNodes/頭"]
+position = Vector2(-640, -899.252)
+texture = ExtResource("17_kbaq4")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(666.751, 346.697, 672.072, 359.647, 703.293, 360.002, 736.642, 364.791, 734.159, 387.674, 726.531, 402.575, 740.367, 400.801, 753.672, 377.208, 736.11, 412.864, 749.059, 425.458, 757.574, 420.314, 773.717, 404.881, 781.877, 383.949, 774.249, 360.179, 766.089, 345.633, 760.945, 355.567, 721.741, 342.972, 699.213, 342.617)
+uv = PackedVector2Array(666.751, 346.697, 672.072, 359.647, 703.293, 360.002, 736.642, 364.791, 734.159, 387.674, 726.531, 402.575, 740.367, 400.801, 753.672, 377.208, 736.11, 412.864, 749.059, 425.458, 757.574, 420.314, 773.717, 404.881, 781.877, 383.949, 774.249, 360.179, 766.089, 345.633, 760.945, 355.567, 721.741, 342.972, 699.213, 342.617)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="スカウターレンズ" type="Polygon2D" parent="PolygonNodes/頭"]
+position = Vector2(-640, -897.418)
+texture = ExtResource("18_hwiwb")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(673.254, 354.25, 673.898, 386.875, 688.708, 404.046, 717.684, 406.193, 742.154, 399.968, 745.802, 373.567, 741.08, 354.035, 706.523, 351.888)
+uv = PackedVector2Array(673.254, 354.25, 673.898, 386.875, 688.708, 404.046, 717.684, 406.193, 742.154, 399.968, 745.802, 373.567, 741.08, 354.035, 706.523, 351.888)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="前髪" type="Polygon2D" parent="PolygonNodes/頭"]
+position = Vector2(20, -650)
+offset = Vector2(-660, -247.599)
+texture = ExtResource("12_ydwyv")
+skeleton = NodePath("../../../Skeleton2D")
+polygon = PackedVector2Array(660.099, 192.837, 633.413, 189.617, 571.299, 216.303, 540.012, 274.276, 529.89, 317.065, 544.613, 369.517, 574.52, 410.006, 593.384, 419.208, 580.961, 395.743, 572.68, 374.578, 580.041, 344.672, 579.121, 366.757, 587.863, 358.015, 592.464, 336.85, 617.77, 283.018, 601.666, 327.648, 593.844, 345.132, 600.286, 347.432, 625.131, 318.446, 633.413, 295.44, 641.695, 341.911, 651.357, 358.015, 669.301, 382.86, 689.546, 398.964, 691.846, 389.302, 678.503, 377.799, 664.24, 338.69, 659.179, 312.004, 657.339, 272.435, 664.357, 290.639, 672.062, 310.624, 685.405, 338.23, 698.748, 356.174, 710.25, 355.254, 701.048, 343.751, 695.527, 327.648, 684.485, 293.14, 703.809, 330.408, 705.649, 343.291, 707.49, 350.653, 713.931, 349.273, 715.312, 306.483, 731.415, 338.69, 741.538, 352.493, 735.096, 380.1, 725.434, 398.504, 739.697, 399.884, 750.74, 388.381, 776.505, 331.789, 772.365, 301.882, 753.04, 231.486, 717.612, 203.88, 677.123, 192.837)
+uv = PackedVector2Array(660.099, 192.837, 633.413, 189.617, 571.299, 216.303, 540.012, 274.276, 529.89, 317.065, 544.613, 369.517, 574.52, 410.006, 593.384, 419.208, 580.961, 395.743, 572.68, 374.578, 580.041, 344.672, 579.121, 366.757, 587.863, 358.015, 592.464, 336.85, 617.77, 283.018, 601.666, 327.648, 593.844, 345.132, 600.286, 347.432, 625.131, 318.446, 633.413, 295.44, 641.695, 341.911, 651.357, 358.015, 669.301, 382.86, 689.546, 398.964, 691.846, 389.302, 678.503, 377.799, 664.24, 338.69, 659.179, 312.004, 657.339, 272.435, 664.357, 290.639, 672.062, 310.624, 685.405, 338.23, 698.748, 356.174, 710.25, 355.254, 701.048, 343.751, 695.527, 327.648, 684.485, 293.14, 703.809, 330.408, 705.649, 343.291, 707.49, 350.653, 713.931, 349.273, 715.312, 306.483, 731.415, 338.69, 741.538, 352.493, 735.096, 380.1, 725.434, 398.504, 739.697, 399.884, 750.74, 388.381, 776.505, 331.789, 772.365, 301.882, 753.04, 231.486, 717.612, 203.88, 677.123, 192.837)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右足" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("2_p6dgu")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(642.326, 1106.98, 740, 1097.67, 795.814, 1260.46, 767.907, 1281.39, 805.116, 1462.79, 788.837, 1620.93, 812.093, 1772.09, 740, 1797.67, 665.581, 1744.19, 691.163, 1618.6, 663.87, 1328.64, 646.977, 1190.7)
+uv = PackedVector2Array(642.326, 1106.98, 740, 1097.67, 795.814, 1260.46, 767.907, 1281.39, 805.116, 1462.79, 788.837, 1620.93, 812.093, 1772.09, 740, 1797.67, 665.581, 1744.19, 691.163, 1618.6, 667.907, 1388.37, 646.977, 1190.7)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0.5), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0.5, 0.5), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左足" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("3_volm1")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(572.888, 1109.67, 655.232, 1116.83, 639.718, 1319.7, 648.072, 1448.59, 607.496, 1793.48, 552.601, 1803.03, 494.124, 1750.52, 552.601, 1602.54, 520.379, 1430.69, 541.86, 1256.46)
+uv = PackedVector2Array(572.888, 1109.67, 655.232, 1116.83, 639.718, 1319.7, 648.072, 1448.59, 607.496, 1793.48, 552.601, 1803.03, 494.124, 1750.52, 552.601, 1602.54, 520.379, 1430.69, 541.86, 1256.46)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0.5), "腰/スカート/左足", PackedFloat32Array(0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0.5), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="スカート" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("4_oiarm")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(577.516, 855.665, 735.32, 858.355, 783.737, 936.36, 800.773, 1182.93, 550.618, 1182.03, 548.825, 880.77)
+uv = PackedVector2Array(577.516, 855.665, 735.32, 858.355, 783.737, 936.36, 800.773, 1182.93, 550.618, 1182.03, 548.825, 880.77)
+bones = ["腰", PackedFloat32Array(0.5, 0.5, 0.5, 0, 0, 0.5), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0)]
+
+[node name="左手" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("8_c7n22")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(438.554, 918.148, 385.433, 939.898, 387.524, 980.053, 408.438, 990.928, 449.847, 977.961, 467.833, 958.72, 485.819, 944.081, 455.703, 914.801)
+uv = PackedVector2Array(438.554, 918.148, 385.433, 939.898, 387.524, 980.053, 408.438, 990.928, 449.847, 977.961, 467.833, 958.72, 485.819, 944.081, 455.703, 914.801)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0.5, 0, 0, 0, 0, 0, 0.5, 0.5), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左上腕" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("6_nhv5o")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(552.502, 509.452, 513.921, 546.808, 510.246, 601.924, 506.572, 634.993, 513.921, 684.597, 500.448, 718.892, 507.184, 747.062, 532.292, 771.558, 565.974, 772.783, 581.284, 757.473, 564.137, 685.21, 564.137, 658.264, 574.548, 627.032, 560.463, 600.699, 560.463, 580.49, 575.773, 552.319, 581.284, 526.599)
+uv = PackedVector2Array(552.502, 509.452, 513.921, 546.808, 510.246, 601.924, 506.572, 634.993, 513.921, 684.597, 500.448, 718.892, 507.184, 747.062, 532.292, 771.558, 565.974, 772.783, 581.284, 757.473, 564.137, 685.21, 564.137, 658.264, 574.548, 627.032, 560.463, 600.699, 560.463, 580.49, 575.773, 552.319, 581.284, 526.599)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右上腕" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("9_t3587")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(731.23, 508.773, 764.855, 514.115, 786.853, 527.314, 800.682, 556.544, 816.081, 596.455, 833.051, 637.937, 852.222, 682.563, 868.25, 722.473, 869.821, 752.328, 865.735, 771.183, 860.707, 787.525, 811.055, 791.61, 776.172, 759.556, 779.315, 735.044, 769.887, 716.817, 771.144, 703.932, 763.916, 686.648, 760.145, 663.707, 757.631, 640.452, 753.86, 618.14, 743.175, 597.713, 747.261, 586.4, 741.603, 544.913, 740.66, 533.285, 738.146, 516.63)
+uv = PackedVector2Array(731.23, 508.773, 764.855, 514.115, 786.853, 527.314, 800.682, 556.544, 816.081, 596.455, 833.051, 637.937, 852.222, 682.563, 868.25, 722.473, 869.821, 752.328, 865.735, 771.183, 860.707, 787.525, 811.055, 791.61, 776.172, 759.556, 779.315, 735.044, 769.887, 716.817, 771.144, 703.932, 763.916, 686.648, 760.145, 663.707, 757.631, 640.452, 753.86, 618.14, 743.175, 597.713, 747.261, 586.4, 741.603, 544.913, 740.66, 533.285, 738.146, 516.63)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="左下腕" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("7_i55vl")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(529.931, 676.758, 497.327, 718.995, 500.291, 738.261, 475.097, 787.908, 467.687, 832.368, 443.975, 855.339, 416.558, 918.324, 459.536, 962.043, 515.111, 948.705, 511.406, 924.993, 528.449, 897.576, 531.413, 873.123, 555.866, 818.289, 570.686, 770.865, 586.247, 730.11, 555.866, 664.902)
+uv = PackedVector2Array(529.931, 676.758, 497.327, 718.995, 500.291, 738.261, 475.097, 787.908, 467.687, 832.368, 443.975, 855.339, 416.558, 918.324, 459.536, 962.043, 515.111, 948.705, 511.406, 924.993, 528.449, 897.576, 531.413, 873.123, 555.866, 818.289, 570.686, 770.865, 586.247, 730.11, 555.866, 664.902)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5), "腰/胸/左上腕/左下腕", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="胴体" type="Polygon2D" parent="PolygonNodes"]
+position = Vector2(-6.10352e-05, 6.10352e-05)
+texture = ExtResource("5_77j55")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(632.244, 487.503, 603.152, 495.84, 561.288, 515.176, 533.002, 582.409, 537.998, 600.469, 539.13, 678.841, 559.455, 763.019, 544.28, 815.664, 546.354, 830.874, 531.838, 853.345, 520.776, 892.061, 473.763, 1029.64, 451.641, 1118.14, 442.308, 1181.74, 448.876, 1193.5, 487.592, 1229.45, 519.049, 1255.37, 542.21, 1270.58, 566.408, 1279.57, 586.803, 1182.78, 599.25, 1057.99, 614.806, 928.015, 653.864, 866.486, 675.988, 903.474, 699.84, 934.931, 709.867, 1007.18, 725.423, 1107.77, 741.67, 1185.21, 759.646, 1259.53, 766.905, 1275.43, 793.523, 1262.29, 828.782, 1233.6, 862.313, 1197.65, 890.314, 1158.24, 889.622, 1147.18, 872.684, 1088.76, 851.252, 1027.58, 818.066, 943.229, 806.66, 930.094, 777.277, 871.328, 766.561, 831.226, 759.302, 825.695, 761.722, 809.448, 751.351, 798.386, 758.266, 762.781, 755.501, 709.892, 775.549, 661.843, 767.253, 610.682, 772.09, 578.188, 747.201, 507.669, 709.522, 493.15, 693.966, 484.162, 661.818, 499.027, 647.645, 497.644)
+uv = PackedVector2Array(632.244, 487.503, 603.152, 495.84, 561.288, 515.176, 533.002, 582.409, 537.998, 600.469, 539.13, 678.841, 559.455, 763.019, 544.28, 815.664, 546.354, 830.874, 531.838, 853.345, 520.776, 892.061, 473.763, 1029.64, 451.641, 1118.14, 442.308, 1181.74, 448.876, 1193.5, 487.592, 1229.45, 519.049, 1255.37, 542.21, 1270.58, 566.408, 1279.57, 586.803, 1182.78, 599.25, 1057.99, 614.806, 928.015, 653.864, 866.486, 675.988, 903.474, 699.84, 934.931, 709.867, 1007.18, 725.423, 1107.77, 741.67, 1185.21, 759.646, 1259.53, 766.905, 1275.43, 793.523, 1262.29, 828.782, 1233.6, 862.313, 1197.65, 890.314, 1158.24, 889.622, 1147.18, 872.684, 1088.76, 851.252, 1027.58, 818.066, 943.229, 806.66, 930.094, 777.277, 871.328, 766.561, 831.226, 759.302, 825.695, 761.722, 809.448, 751.351, 798.386, 758.266, 762.781, 755.501, 709.892, 775.549, 661.843, 767.253, 610.682, 772.09, 578.188, 747.201, 507.669, 709.522, 493.15, 693.966, 484.162, 661.818, 499.027, 647.645, 497.644)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 1, 0.5, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="右下腕" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("10_1d64w")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(772.094, 659.034, 827.684, 642.895, 865.341, 667.103, 876.101, 769.317, 862.651, 895.74, 825.89, 958.502, 810.648, 991.677, 744.299, 941.467, 764.024, 894.843, 746.988, 861.668, 764.921, 834.77, 774.783, 794.422, 776.577, 737.039, 766.714, 710.141, 772.99, 679.656)
+uv = PackedVector2Array(772.094, 659.034, 827.684, 642.895, 865.341, 667.103, 876.101, 769.317, 862.651, 895.74, 825.89, 958.502, 810.648, 991.677, 744.299, 941.467, 764.024, 894.843, 746.988, 861.668, 764.921, 834.77, 774.783, 794.422, 776.577, 737.039, 766.714, 710.141, 772.99, 679.656)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="リボン" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("24_gs403")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(649.888, 523.24, 617.519, 516.012, 582.008, 548.381, 589.55, 569.436, 619.091, 572.893, 614.691, 597.405, 626.633, 642.343, 642.346, 641.086, 661.515, 608.718, 684.77, 643.6, 697.341, 630.087, 708.025, 579.178, 699.855, 571.95, 737.565, 551.837, 726.252, 535.182, 701.112, 517.269, 674.086, 527.64, 660.572, 516.955)
+uv = PackedVector2Array(649.888, 523.24, 617.519, 516.012, 582.008, 548.381, 589.55, 569.436, 619.091, 572.893, 614.691, 597.405, 626.633, 642.343, 642.346, 641.086, 661.515, 608.718, 684.77, 643.6, 697.341, 630.087, 708.025, 579.178, 699.855, 571.95, 737.565, 551.837, 726.252, 535.182, 701.112, 517.269, 674.086, 527.64, 660.572, 516.955)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0.5, 0.5, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
+
+[node name="ポケット" type="Polygon2D" parent="PolygonNodes"]
+texture = ExtResource("11_qlxob")
+skeleton = NodePath("../../Skeleton2D")
+polygon = PackedVector2Array(719.985, 888.524, 776.57, 899.976, 863.469, 1028.64, 831.135, 1042.79, 706.512, 1042.79, 686.976, 920.859)
+uv = PackedVector2Array(719.985, 888.524, 776.57, 899.976, 863.469, 1028.64, 831.135, 1042.79, 706.512, 1042.79, 686.976, 920.859)
+bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0)]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+position = Vector2(665, 747.5)
+rotation = 0.0287655
+
+[node name="腰" type="Bone2D" parent="Skeleton2D"]
+position = Vector2(-10, -35)
+rest = Transform2D(1, 0, 0, 1, -10, -35)
+
+[node name="胸" type="Bone2D" parent="Skeleton2D/腰"]
+position = Vector2(0.1127, -134.786)
+rotation = -0.00857205
+rest = Transform2D(1, 0, 0, 1, 0.1127, -134.786)
+
+[node name="首" type="Bone2D" parent="Skeleton2D/腰/胸"]
+position = Vector2(-0.0853016, -62.4999)
+rest = Transform2D(1, 0, 0, 1, -0.0853016, -62.4999)
+
+[node name="頭" type="Bone2D" parent="Skeleton2D/腰/胸/首"]
+position = Vector2(-1.17788, -42.4837)
+rotation = -1.5708
+rest = Transform2D(-4.37114e-08, -1, 1, -4.37114e-08, -0.987302, -43.6777)
+auto_calculate_length_and_angle = false
+length = 263.223
+bone_angle = 0.0
+
+[node name="右上腕" type="Bone2D" parent="Skeleton2D/腰/胸"]
+position = Vector2(109.036, -43.8892)
+rest = Transform2D(1, 0, 0, 1, 109.036, -43.8892)
+
+[node name="右下腕" type="Bone2D" parent="Skeleton2D/腰/胸/右上腕"]
+position = Vector2(62.6346, 202.191)
+rotation = -0.0142447
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(0.999898, -0.0142442, 0.0142442, 0.999898, 62.6346, 202.191)
+auto_calculate_length_and_angle = false
+length = 220.69
+bone_angle = 103.68
+
+[node name="左上腕" type="Bone2D" parent="Skeleton2D/腰/胸"]
+position = Vector2(-102.548, -34.86)
+rotation = 0.010472
+scale = Vector2(0.999999, 0.999999)
+rest = Transform2D(0.999944, 0.0104718, -0.0104718, 0.999944, -98.9908, -41.524)
+auto_calculate_length_and_angle = false
+length = 239.606
+bone_angle = 108.909
+
+[node name="左下腕" type="Bone2D" parent="Skeleton2D/腰/胸/左上腕"]
+position = Vector2(-5.71572, 189.931)
+rotation = 0.137881
+scale = Vector2(0.999998, 0.999998)
+rest = Transform2D(0.982042, 0.188654, -0.188654, 0.982042, -5.71572, 189.931)
+auto_calculate_length_and_angle = false
+length = 180.569
+bone_angle = 123.581
+
+[node name="手" type="Bone2D" parent="Skeleton2D/腰/胸/左上腕/左下腕"]
+position = Vector2(-63.2639, 183.978)
+rest = Transform2D(0.975785, -0.218731, 0.218731, 0.975785, -63.2639, 183.978)
+auto_calculate_length_and_angle = false
+length = 76.747
+bone_angle = -232.063
+
+[node name="スカート" type="Bone2D" parent="Skeleton2D/腰"]
+position = Vector2(-1.78814e-07, 97.5)
+rotation = -0.0273996
+rest = Transform2D(1, 0, 0, 1, -1.78814e-07, 97.5)
+
+[node name="左足" type="Bone2D" parent="Skeleton2D/腰/スカート"]
+position = Vector2(-64.9923, 522.903)
+rest = Transform2D(1, 0, 0, 1, -64.9923, 522.903)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -253.44
+
+[node name="左下足" type="Bone2D" parent="Skeleton2D/腰/スカート/左足"]
+position = Vector2(-29.4366, 412.541)
+rest = Transform2D(1, 0, 0, 1, -29.4366, 412.541)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="右足" type="Bone2D" parent="Skeleton2D/腰/スカート"]
+position = Vector2(67.5041, 520.222)
+rest = Transform2D(1, 0, 0, 1, 67.5041, 520.222)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -288.0
+
+[node name="右下足" type="Bone2D" parent="Skeleton2D/腰/スカート/右足"]
+position = Vector2(23.6859, 413.304)
+rest = Transform2D(1, 0, 0, 1, 23.6859, 413.304)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 0.0
+
+[node name="白衣右すそ" type="Bone2D" parent="Skeleton2D/腰/スカート"]
+position = Vector2(174.452, 387.425)
+rest = Transform2D(1, 0, 0, 1, 167.576, 387.505)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = -218.88
+
+[node name="白衣左すそ" type="Bone2D" parent="Skeleton2D/腰/スカート"]
+position = Vector2(-180.895, 395.193)
+rest = Transform2D(1, 0, 0, 1, -173.502, 395.356)
+auto_calculate_length_and_angle = false
+length = 16.0
+bone_angle = 46.08
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hd2cw")
+}
+script = ExtResource("38_o3pl2")
+
+[connection signal="animation_finished" from="PolygonNodes/頭/目アニメーション" to="PolygonNodes/頭/目アニメーション" method="_on_animation_finished"]

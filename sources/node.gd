@@ -12,10 +12,19 @@ var rng = RandomNumberGenerator.new()
 @onready var LineEditRegEx = RegEx.new()
 
 @onready var control: Control = %Control
+@onready var life_manager: Control = $LifeManager
+@onready var hint_manager: Control = $HintManager
+@onready var chara_live_2d: Node2D = $CharaLive2D
+@onready var complete_screen: Control = $CompleteScreen
 
 
 var old_text = str(puzzle_seed)
 var grid_size = 3
+
+
+func _ready() -> void:
+	create_puzzle("new")
+	LineEditRegEx.compile("^[0-9a-z]*$")
 
 
 func generate_puzzle(seed_val: int, min_val: int, max_val: int) -> Dictionary:
@@ -102,10 +111,10 @@ func generate_puzzle(seed_val: int, min_val: int, max_val: int) -> Dictionary:
 	return puzzle
 
 
-func set_puzzle(_seed:int):
+func set_puzzle():
 
 	# 例：パズルを生成 (最小値1、最大値9)
-	var puzzle_data = generate_puzzle(_seed, 1, 9)
+	var puzzle_data = generate_puzzle(puzzle_seed, 1, 9)
 
 	signal_create_grid.emit(puzzle_data["size"], puzzle_data["row_targets"], puzzle_data["col_targets"], puzzle_data["row_target_indices"], puzzle_data["grid"])
 
@@ -124,20 +133,8 @@ func set_puzzle(_seed:int):
 		#print("パズル生成失敗")
 
 
-func _ready() -> void:
-	set_puzzle(puzzle_seed)
-
-	LineEditRegEx.compile("^[0-9a-z]*$")
-
-
 func _on_button_pressed() -> void:
-	var _seed_length = old_text.length()
-	if _seed_length > 0:
-		for grid in get_tree().get_nodes_in_group("grid_group"):
-			grid.get_parent().remove_child(grid)
-		set_puzzle(int(old_text))
-		control.toggle_mode = false
-		control.update_toggle_visibility()
+	create_puzzle("new")
 
 
 func _on_text_edit_text_changed(new_text: String) -> void:
@@ -156,13 +153,25 @@ func _on_menu_button_item_selected(index: int) -> void:
 
 
 func _on_button_2_pressed() -> void:
-	rng.seed = Time.get_ticks_msec()
+	complete_screen.hide_compscreen()
+	create_puzzle("rnd")
+
+
+func create_puzzle(_mode) -> void:
 	var _seed_length = old_text.length()
 	if _seed_length > 0:
 		for grid in get_tree().get_nodes_in_group("grid_group"):
 			grid.get_parent().remove_child(grid)
-		rng.seed = Time.get_ticks_msec()
-		old_text = str(rng.randi_range(10000000, 99999999))
-		set_puzzle(int(old_text))
+		if _mode == "new":
+			puzzle_seed = int(old_text)
+		else:
+			rng.seed = Time.get_ticks_msec()
+			puzzle_seed = rng.randi_range(10000000, 99999999)
+			old_text = str(puzzle_seed)
+		set_puzzle()
 		control.toggle_mode = false
 		control.update_toggle_visibility()
+		life_manager.set_life(0)
+		hint_manager.set_hint(0)
+		chara_live_2d.change_anim("アイドル")
+		chara_live_2d.change_motion("まばたき")

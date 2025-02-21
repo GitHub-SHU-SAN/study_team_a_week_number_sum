@@ -1,8 +1,20 @@
 extends GridContainer
 
 var grid_scene = preload("res://scenes/grid_scene.tscn")
+@onready var chara_live_2d: Node2D = $"../../CharaLive2D"
+
+@onready var complete_screen: Control = $"../../CompleteScreen"
+
 
 var grid_head_node = []
+
+@onready var audio_line_correct: AudioStreamPlayer2D = $"/root/Node/AudioLineCorrect"
+@onready var audio_complete: AudioStreamPlayer2D = $"../../AudioComplete"
+
+
+func _ready() -> void:
+	var main_node = get_parent().get_parent()
+	main_node.signal_create_grid.connect(_on_signal_create_grid)
 
 
 func _create_grid(_num:int, _value:int, _type:String, _correct:String) -> void:
@@ -48,6 +60,7 @@ func _on_signal_create_grid(_grid_size, _row_target, _col_target, _row_target_in
 
 
 func _on_signal_correct_check(_node: Node) -> void:
+	chara_live_2d.change_motion("笑顔")
 	if _node.is_correct:
 		var row_all_correct := true
 		var col_all_correct := true
@@ -70,10 +83,15 @@ func _on_signal_correct_check(_node: Node) -> void:
 
 		if row_all_correct:
 			grid_head_node[row_index + columns - 1].lock_correct_head()
+			audio_line_correct.play()
 		if col_all_correct:
 			grid_head_node[col_index].lock_correct_head()
+			audio_line_correct.play()
 
-
-func _ready() -> void:
-	var main_node = get_parent().get_parent()
-	main_node.signal_create_grid.connect(_on_signal_create_grid)
+		var correct_complete = true
+		for idx in grid_head_node:
+			if not idx.check_lock():
+				correct_complete = false
+				break
+		if correct_complete:
+			complete_screen.show_compscreen()
