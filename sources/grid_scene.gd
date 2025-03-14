@@ -21,6 +21,7 @@ var is_lock: bool = false
 var grid_number: int = 0
 var row_index: int = 0
 var col_index: int = 0
+var number_text: StringName
 
 enum MARK_STATES {
 	NONE,
@@ -39,7 +40,8 @@ func _ready() -> void:
 func _create_label(_num:int, _value:int, _type:String, _col, _correct:String) -> void:
 	button_node = Button.new()
 
-	var grid_fit_size = 600 / _col
+	var grid_fit_size: float = 600.0 / _col
+	number_text = str(_value)
 	grid_number = _num
 
 
@@ -62,7 +64,7 @@ func _create_label(_num:int, _value:int, _type:String, _col, _correct:String) ->
 
 
 func _setup_button(button: Button, _value: int, _type: String, _col: int) -> void: 
-	var button_fit_size = 640 / _col
+	var button_fit_size: float = 640.0 / _col
 	button.flat = true
 	button.custom_minimum_size = Vector2(button_fit_size, button_fit_size)
 	button.add_theme_font_size_override("font_size", 36)
@@ -81,7 +83,7 @@ func _setup_button(button: Button, _value: int, _type: String, _col: int) -> voi
 
 
 func _on_button_node_pressed() -> void:
-	if button_node.disabled:
+	if button_node.disabled || is_lock:
 		return
 
 	hint_manager.clear_massage()
@@ -135,4 +137,8 @@ func lock_correct_head() -> void:
 	is_lock = true
 	button_node.modulate = Color(255, 255, 255, 0.4)
 	color_rect.modulate = Color(255, 255, 255, 0.4)
-	
+
+
+func markup() -> void:
+	is_lock = true
+	fall_node.visible = true

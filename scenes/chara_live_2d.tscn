@@ -404,7 +404,6 @@ tracks/9/keys = {
 
 [sub_resource type="Animation" id="Animation_jb68g"]
 resource_name = "笑顔"
-length = 3.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -424,7 +423,7 @@ tracks/1/path = NodePath("../左眉:visible")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.96667),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -436,7 +435,7 @@ tracks/2/path = NodePath("../右眉:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 2.96667),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -448,7 +447,7 @@ tracks/3/path = NodePath("../表情/笑顔:visible")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 2.96667),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -460,7 +459,7 @@ tracks/4/path = NodePath("../表情/おどろき:visible")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 2.96667),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, false]
@@ -472,7 +471,7 @@ tracks/5/path = NodePath(".:visible")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 2.96667),
+"times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -484,7 +483,7 @@ tracks/6/path = NodePath("../目アニメーション")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(2.96667),
+"times": PackedFloat32Array(1),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [&"まばたき"],
@@ -1005,6 +1004,30 @@ tracks/41/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("PolygonNodes/頭/表情:visible")
+tracks/42/interp = 1
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Skeleton2D/腰:scale")
+tracks/43/interp = 1
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_nhiw3"]
@@ -1687,6 +1710,20 @@ tracks/31/keys = {
 "update": 1,
 "values": [false]
 }
+tracks/32/type = "method"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("PolygonNodes/頭/目アニメーション")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"stop_motion"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_868uy"]
 resource_name = "アイドル"
@@ -2216,7 +2253,7 @@ uv = PackedVector2Array(685.994, 361.852, 683.653, 373.169, 683.848, 403.219, 70
 bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="左黒目" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
-position = Vector2(-641.447, -900)
+position = Vector2(-640, -900)
 texture = ExtResource("10_gqp4n")
 skeleton = NodePath("../../../../Skeleton2D")
 polygon = PackedVector2Array(604.796, 354.126, 612.616, 357.54, 621.869, 367.013, 622.75, 378.027, 621.538, 392.566, 611.735, 399.836, 598.408, 400.387, 588.274, 393.778, 585.3, 379.569, 589.596, 361.285)
@@ -2224,7 +2261,7 @@ uv = PackedVector2Array(604.796, 354.126, 612.616, 357.54, 621.869, 367.013, 622
 bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="右黒目" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
-position = Vector2(-640.263, -900)
+position = Vector2(-640, -900)
 texture = ExtResource("11_nejg4")
 skeleton = NodePath("../../../../Skeleton2D")
 polygon = PackedVector2Array(708.321, 355.43, 714.015, 357.49, 722.981, 362.821, 727.464, 373.725, 726.373, 385.114, 722.375, 396.625, 711.228, 401.229, 699.234, 400.017, 690.147, 391.293, 689.783, 377.36, 695.962, 359.913)
@@ -2232,7 +2269,7 @@ uv = PackedVector2Array(708.321, 355.43, 714.015, 357.49, 722.981, 362.821, 727.
 bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="左目ハイライト" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
-position = Vector2(-643.947, -900)
+position = Vector2(-640, -900)
 texture = ExtResource("13_d2fxr")
 skeleton = NodePath("../../../../Skeleton2D")
 polygon = PackedVector2Array(608.68, 358.305, 597.328, 375.157, 586.507, 388.994, 598.037, 400.169, 616.84, 398.395, 621.985, 384.736, 613.825, 372.319, 618.082, 360.789)
@@ -2240,7 +2277,7 @@ uv = PackedVector2Array(608.68, 358.305, 597.328, 375.157, 586.507, 388.994, 598
 bones = ["腰", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/首/頭", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "腰/胸/右上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/右上腕/右下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/胸/左上腕/左下腕/手", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/左足/左下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/右足/右下足", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣右すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0), "腰/スカート/白衣左すそ", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)]
 
 [node name="右目ハイライト" type="Polygon2D" parent="PolygonNodes/頭/通常目"]
-position = Vector2(-640.263, -900)
+position = Vector2(-640, -900)
 texture = ExtResource("14_1c8uw")
 skeleton = NodePath("../../../../Skeleton2D")
 polygon = PackedVector2Array(695.06, 361.18, 697.658, 375.205, 690.645, 387.152, 697.658, 400.138, 709.345, 399.878, 720.513, 395.982, 724.668, 384.814, 710.384, 377.023, 709.085, 366.115, 698.956, 359.882)

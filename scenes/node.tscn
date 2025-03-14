@@ -479,9 +479,7 @@ stream = ExtResource("20_ad0lg")
 volume_db = -12.236
 
 [connection signal="item_selected" from="Control/MenuButton" to="." method="_on_menu_button_item_selected"]
-[connection signal="text_change_rejected" from="Control/LineEdit" to="." method="_on_text_edit_text_change_rejected"]
 [connection signal="text_changed" from="Control/LineEdit" to="." method="_on_text_edit_text_changed"]
-[connection signal="text_submitted" from="Control/LineEdit" to="." method="_on_line_edit_text_submitted"]
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Control/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="gui_input" from="Control/ToggleOn" to="Control" method="_on_toggle_gui_input"]

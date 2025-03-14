@@ -83,10 +83,28 @@ func _on_signal_correct_check(_node: Node) -> void:
 
 		if row_all_correct:
 			grid_head_node[row_index + columns - 1].lock_correct_head()
+			for idx in row_group:
+				if not idx.is_correct:
+					idx.markup()
 			audio_line_correct.play()
+
 		if col_all_correct:
 			grid_head_node[col_index].lock_correct_head()
+			for idx in col_group:
+				if not idx.is_correct:
+					idx.markup()
 			audio_line_correct.play()
+
+		# markup完了後のfallチェック追加
+		var lock_check = true
+		for idx in grid_head_node.size():
+			if grid_head_node[idx].number_text == "0":
+				for jdx in get_tree().get_nodes_in_group("col_group" + str(idx)):
+					if not jdx.is_lock:
+						lock_check = false
+						break
+				if lock_check:
+					grid_head_node[idx].lock_correct_head()
 
 		var correct_complete = true
 		for idx in grid_head_node:

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://s6to2jaibxu5"]
 
 [ext_resource type="Texture2D" uid="uid://dgimmhl3ewjfa" path="res://images/success.png" id="1_pvgtf"]
-[ext_resource type="Script" path="res://scenes/grid_scene.gd" id="1_yvvl1"]
+[ext_resource type="Script" path="res://sources/grid_scene.gd" id="1_yvvl1"]
 [ext_resource type="Texture2D" uid="uid://51wu7nft337d" path="res://images/fall.png" id="2_j8cex"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpg4i"]

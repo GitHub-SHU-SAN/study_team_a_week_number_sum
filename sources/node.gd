@@ -28,14 +28,14 @@ func _ready() -> void:
 
 
 func generate_puzzle(seed_val: int, min_val: int, max_val: int) -> Dictionary:
-
-	if typeof(seed_val) != TYPE_INT:
-		print("シード値は整数である必要があります。")
-		return {}
-
-	if min_val > max_val:
-		print("最小値は最大値以下である必要があります。")
-		return {}
+#
+	#if typeof(seed_val) != TYPE_INT:
+		#print("シード値は整数である必要があります。")
+		#return {}
+#
+	#if min_val > max_val:
+		#print("最小値は最大値以下である必要があります。")
+		#return {}
 
 	var size = grid_size
 
@@ -81,12 +81,12 @@ func generate_puzzle(seed_val: int, min_val: int, max_val: int) -> Dictionary:
 					indices_to_add.append(idx) # 行番号を記録
 					break # 行のインデックスリスト内で一致するものを1つ見つければOK
 
-		if indices_to_add.is_empty(): # 関連する行がない場合はランダムに選択
-			var num_to_add = rng.randi_range(1, grid_size)
-			while indices_to_add.size() < num_to_add:
-				var index = rng.randi_range(0, grid_size - 1)
-				if not indices_to_add.has(index):
-					indices_to_add.append(index)
+		#if indices_to_add.is_empty(): # 関連する行がない場合はランダムに選択
+			#var num_to_add = rng.randi_range(1, grid_size)
+			#while indices_to_add.size() < num_to_add:
+				#var index = rng.randi_range(0, grid_size - 1)
+				#if not indices_to_add.has(index):
+					#indices_to_add.append(index)
 
 		var current_col_indices = []
 		for idx in indices_to_add:
